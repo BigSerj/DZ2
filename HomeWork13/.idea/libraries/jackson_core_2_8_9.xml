@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="jackson-core-2.8.9">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../JAVA for ANDROID/JSON/Jackson/jackson-core-2.8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JAVA for ANDROID/JSON/Jackson/jackson-core-asl-1.9.13-atlassian-2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JAVA for ANDROID/JSON/Jackson/jackson-core-lgpl-1.9.13-atlassian-2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JAVA for ANDROID/JSON/Jackson/jackson-jaxrs-1.9.13-atlassian-2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JAVA for ANDROID/JSON/Jackson/jackson-mapper-lgpl-1.9.13-atlassian-2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JAVA for ANDROID/JSON/Jackson/jackson-mrbean-1.9.13-atlassian-2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JAVA for ANDROID/JSON/Jackson/jackson-smile-1.9.13-atlassian-2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JAVA for ANDROID/JSON/Jackson/jackson-xc-1.9.13-atlassian-2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

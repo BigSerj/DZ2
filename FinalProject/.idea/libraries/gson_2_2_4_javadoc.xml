@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="gson-2.2.4-javadoc">
+    <ANNOTATIONS>
+      <root url="file:///Flash/JAVA for ANDROID/JSON/libs" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar:///Flash/JAVA for ANDROID/JSON/libs/gson-2.2.4.jar!/" />
+      <root url="jar:///Flash/JAVA for ANDROID/JSON/libs/json-simple-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar:///Flash/JAVA for ANDROID/JSON/libs/gson-2.2.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar:///Flash/JAVA for ANDROID/JSON/libs/gson-2.2.4-sources.jar!/" />
+      <root url="jar:///Flash/JAVA for ANDROID/JSON/libs/gson-2.3.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

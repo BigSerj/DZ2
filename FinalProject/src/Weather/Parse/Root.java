@@ -5,13 +5,11 @@ import java.util.ArrayList;
 public class Root {
 
     // делаем Root singleton
-    private static Root root;
-    private Root() {
-    }
+    private static Root root = new Root();
     public static Root getInstance(){
-        if (root==null)  // если root еще не существует - создаем новый объект root.
-            return new Root();
-        return root; // а если уже есть созданный root - возвращаем этот созданный root
+        return root; // возвращаем уже созданный root
+    }
+    private Root() {
     }
 
 

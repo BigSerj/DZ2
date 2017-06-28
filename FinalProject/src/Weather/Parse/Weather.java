@@ -98,6 +98,7 @@ public class Weather {
                 ", \ndate=" + date + ", \nlocation [" + locationPrint(location) + "]\n]";
     }
 
+    // метод вывода на экран значений корзины location
     private String locationPrint(ArrayList<String> location){
         String returnVal="";
         for (int i=0;i<location.size();i++) {

@@ -9,45 +9,51 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.util.ArrayList;
 
-public class ParseXML {
 
-//    public static void main(String[] args) {
-//        Root root = parseXML("weather.xml");
-//        System.out.println(root.toString());
-//    }
+public class ParseXML implements Parse{
 
-    public static Root parseXML(String path){
-        Document dom = null;
+    // переопределяем метод getPath() для ParseXML
+    @Override
+    public String getPath() {
+        return LINK_XML;
+    }
 
+    // переопределяем метод parseThis() для ParseXML
+    @Override
+    public Root parseThis() {
+        Document dom;
+
+        // открываем скачанный файл для парсинга, если ошибка - Exception ее словит и выведет соотв. сообщ-е и вернет пустой root
         try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
-            dom = db.parse(path);
+            dom = db.parse(LINK_ON_THIS_SYSTEM);
         }catch (Exception e){
             System.out.println("Ошибка открытия файла .xml "+e.toString());
             return null;
         }
 
-
+        // Создаем экземпляр класса root
         Root root = Root.getInstance();
 
+        // парсим файл
         Element element = dom.getDocumentElement();
-
+        // берем имя записываем в root
         NodeList nameNodeList = element.getElementsByTagName("name");
         root.setName(nameNodeList.item(0).getFirstChild().getNodeValue());
-
+        // берем дату записываем в root
         NodeList dateNodeList = element.getElementsByTagName("date");
         root.setDate(dateNodeList.item(0).getFirstChild().getNodeValue());
-
+        // создаем лист для элементов массива weather
         ArrayList<Weather> weatherList = new ArrayList<>();
 
-
+        // разбираем поэлементно каждый элемент массива weather. Берем все теги с именем 'element' и перебираем каждый
         NodeList nList = element.getElementsByTagName("element");
         for (int i = 0; i < nList.getLength(); i++) {
             Node nNode = nList.item(i);
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement = (Element) nNode;
-                // отделяем element weather`а от element`а
+                // отделяем element weather`а от element`а - в файле есть 2 вида данных под тэгом 'element'
                 if (eElement.getElementsByTagName("date").item(0)!=null) {
                     Weather weather = new Weather();
                     weather.setDate(eElement.getElementsByTagName("date").item(0).getTextContent());//ставим дату
@@ -70,7 +76,7 @@ public class ParseXML {
                     else
                         weather.setId(Integer.parseInt(idNode.getTextContent()));
 
-
+                    // создаем и заполняем лист с "location" очередного элемента weather
                     NodeList locationNodeList = eElement.getElementsByTagName("location");
                     ArrayList<String> locationNodeArray = new ArrayList<>();
                     for (int j=0;j<locationNodeList.getLength();j++)
@@ -100,11 +106,12 @@ public class ParseXML {
                     else
                         weather.setTitle(titleNode.getTextContent());
 
-
+                    // добавляем данный распарсенный элемента массива weather из файла в нашу корзину
                     weatherList.add(weather);
                 }
             }
         }
+        // добавляем нашу заполненную корзину weather в root
         root.setWeather(weatherList);
 
         return root;

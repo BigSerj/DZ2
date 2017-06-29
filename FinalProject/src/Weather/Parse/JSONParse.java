@@ -2,19 +2,21 @@ package Weather.Parse;
 
 import java.io.FileReader;
 import java.util.ArrayList;
+import Weather.Constants;
+import Weather.MyExceptions;
 
 import org.json.simple.parser.JSONParser;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-// НЕ РАБОТАЕТ SERIALAZED   !!!
 
-public class JSONParse implements Parse{
+public class JSONParse implements Parse {
+
 
     // переопределяем метод getPath() для JSONParse
     @Override
     public String getPath() {
-        return LINK_JSON;
+        return Constants.LINK_JSON;
     }
 
     // переопределяем метод parseThis() для JSONParse
@@ -28,36 +30,117 @@ public class JSONParse implements Parse{
 
         try {
             // создаем объект распарсенного файла для его последующего разбора
-            JSONObject rootObj = (JSONObject)parser.parse(new FileReader(LINK_ON_THIS_SYSTEM));
+//            JSONObject rootObj = (JSONObject)parser.parse(new FileReader(Constants.LINK_ON_THIS_SYSTEM));
+            JSONObject rootObj = (JSONObject)parser.parse(new FileReader("weather.json"));
 
             // считываем name в root
-            String name = (String)rootObj.get("name");
+            String name = (String)rootObj.get(Constants.NAME_TAG);
             root.setName(name);
             // считываем date в root
-            String dateRoot = (String)rootObj.get("date");
+            String dateRoot = (String)rootObj.get(Constants.DATE_TAG);
             root.setDate(dateRoot);
 
             // создаем лист для элементов массива weather
             ArrayList<Weather> weatherList = new ArrayList<>();
             // считываем массив weather в новую переменную для последующего разбора
-            JSONArray weatherArray = (JSONArray)rootObj.get("weather");
+            JSONArray weatherArray = (JSONArray)rootObj.get(Constants.WEATHER_TAG);
 
             // пока массив не окончен
-            for(Object item:weatherArray){
+            for (int j=0;j<weatherArray.size();j++){
                 // берем один элемент
-                JSONObject itemObj = (JSONObject)item;
+                JSONObject itemObj = (JSONObject)weatherArray.get(j);
                 // создаем наш элемент weather
                 Weather weather = new Weather();
 
+
                 // считываем все поля очередного элемента массива weather
-                long id = (long)itemObj.get("id");
-                String title = (String) itemObj.get("title");
-                String description = (String) itemObj.get("description");
-                long tempMin = (long)itemObj.get("temp_min");// НЕ РАБОТАЕТ SERIALAZED   !!!
-                long tempMax = (long)itemObj.get("temp_max");// НЕ РАБОТАЕТ SERIALAZED   !!!
-                long humidity = (long)itemObj.get("humidity");
-                String date = (String) itemObj.get("date");
-                ArrayList<String> location = (ArrayList<String>) itemObj.get("location");
+                long id = -999;
+                try {
+                    try {
+                        id = (long) itemObj.get(Constants.ID_TAG);
+                    } catch (Exception e) {
+                        throw new MyExceptions(Constants.ID_TAG,e);
+                    }
+                }catch (MyExceptions e){
+                    e.getRussianMessage(j);
+                }
+
+                String title = "";
+                try {
+                    try {
+                        title = (String) itemObj.get(Constants.TITLE_TAG);
+                    } catch (Exception e) {
+                        throw new MyExceptions(Constants.TITLE_TAG,e);
+                    }
+                }catch (MyExceptions e){
+                    e.getRussianMessage(j);
+                }
+
+                String description = "";
+                try {
+                    try {
+                        description = (String) itemObj.get(Constants.DESCRIPTION_TAG);
+                    } catch (Exception e) {
+                        throw new MyExceptions(Constants.DESCRIPTION_TAG,e);
+                    }
+                }catch (MyExceptions e){
+                    e.getRussianMessage(j);
+                }
+
+                long tempMin = -999;
+                try {
+                    try {
+                        tempMin = (long) itemObj.get(Constants.TEMP_MIN_TAG);
+                    } catch (Exception e) {
+                        throw new MyExceptions(Constants.TEMP_MIN_TAG,e);
+                    }
+                }catch (MyExceptions e){
+                    e.getRussianMessage(j);
+                }
+
+                long tempMax = -999;
+                try {
+                    try {
+                        tempMax = (long) itemObj.get(Constants.TEMP_MAX_TAG);
+                    } catch (Exception e) {
+                        throw new MyExceptions(Constants.TEMP_MAX_TAG,e);
+                    }
+                }catch (MyExceptions e){
+                    e.getRussianMessage(j);
+                }
+
+                long humidity = -999;
+                try {
+                    try {
+                        humidity = (long) itemObj.get(Constants.HUMIDITY_TAG);
+                    } catch (Exception e) {
+                        throw new MyExceptions(Constants.HUMIDITY_TAG,e);
+                    }
+                }catch (MyExceptions e){
+                    e.getRussianMessage(j);
+                }
+
+                String date = "";
+                try {
+                    try {
+                        date = (String) itemObj.get(Constants.DATE_TAG);
+                    } catch (Exception e) {
+                        throw new MyExceptions(Constants.DATE_TAG,e);
+                    }
+                }catch (MyExceptions e){
+                    e.getRussianMessage(j);
+                }
+
+                ArrayList<String> location = new ArrayList<>();
+                try {
+                    try {
+                        location = (ArrayList<String>) itemObj.get(Constants.LOCATION_TAG);
+                    } catch (Exception e) {
+                        throw new MyExceptions(Constants.LOCATION_TAG,e);
+                    }
+                }catch (MyExceptions e){
+                    e.getRussianMessage(j);
+                }
 
                 // вписываем считанное, соответственно, в наш объект weather
                 weather.setId((int)id);
@@ -78,7 +161,8 @@ public class JSONParse implements Parse{
 
         // при обнаружении ошибки считываания файла вылезет соотв. сообщение об ошибке:
         }catch (Exception e){
-            System.out.println("Ошбика чтения .json файла "+e.toString());
+            System.out.println("Ошбика чтения .json файла. Проверьте скрипт на наличие несоответствующих " +
+                    "элементов. "+e.toString());
         }
 
         return root;

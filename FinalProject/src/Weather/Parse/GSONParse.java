@@ -4,13 +4,15 @@ import com.google.gson.Gson;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import Weather.Constants;
+
 
 public class GSONParse implements Parse{
 
     // переопределяем метод getPath() для GSONParse
     @Override
     public String getPath() {
-        return LINK_JSON;
+        return Constants.LINK_JSON;
     }
 
     // переопределяем метод parseThis() для GSONParse
@@ -22,7 +24,7 @@ public class GSONParse implements Parse{
         // пробуем открыть файл и распарсить
         try{
             // создаем объект reader и сразу указываем объект нашего файла
-            BufferedReader reader = new BufferedReader(new FileReader(LINK_ON_THIS_SYSTEM));
+            BufferedReader reader = new BufferedReader(new FileReader(Constants.LINK_ON_THIS_SYSTEM));
             // создаем объект GSON
             Gson gson = new Gson();
             // парсим и записываем результат в объект root

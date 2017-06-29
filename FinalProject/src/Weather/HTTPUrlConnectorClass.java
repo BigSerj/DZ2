@@ -6,8 +6,6 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import static Weather.Parse.Parse.LINK_ON_THIS_SYSTEM;
-
 
 public class HTTPUrlConnectorClass {
 
@@ -31,7 +29,7 @@ public class HTTPUrlConnectorClass {
                 inputStreams = httpURLConnection.getInputStream();
 
                 // создаем выходной поток для нашего файла
-                outputStream = new FileOutputStream(new File(LINK_ON_THIS_SYSTEM));
+                outputStream = new FileOutputStream(new File(Constants.LINK_ON_THIS_SYSTEM));
 
                 // записываем скачиваемую информацию в файл по 1кБ
                 int bytesRead;  // если вернулась -1 - значит файл закончился, все скачали. Количество байт за одно чтение read()

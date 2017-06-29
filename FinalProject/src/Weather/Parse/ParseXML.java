@@ -4,6 +4,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import Weather.Constants;
+
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -15,7 +17,7 @@ public class ParseXML implements Parse{
     // переопределяем метод getPath() для ParseXML
     @Override
     public String getPath() {
-        return LINK_XML;
+        return Constants.LINK_XML;
     }
 
     // переопределяем метод parseThis() для ParseXML
@@ -27,7 +29,7 @@ public class ParseXML implements Parse{
         try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
-            dom = db.parse(LINK_ON_THIS_SYSTEM);
+            dom = db.parse(Constants.LINK_ON_THIS_SYSTEM);
         }catch (Exception e){
             System.out.println("Ошибка открытия файла .xml "+e.toString());
             return null;

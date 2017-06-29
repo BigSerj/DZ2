@@ -20,7 +20,7 @@
         "title": "Clear",
         "description": "Sky is Clear",
         "temp_min": 8,
-        "temp_max": 12,
+        "temp_max": 10,
         "humidity": 65,
         "date": "2015-03-02 17:50:00 +0000",
         "location": [

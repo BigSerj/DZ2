@@ -22,19 +22,19 @@ public class Main {
 
 
     // Task2
-//    public static void print10(Thread thread,ArrayList<Integer> list10){
-//        StringBuffer sb = new StringBuffer();
-//        sb.append(thread.getName()).append(":  ");
-//        for (Integer aList10 : list10) sb.append(aList10).append(" ");
-//        System.out.println(sb.toString());
-//    }
-
-    // Task3
-    public synchronized static void print10(Thread thread,ArrayList<Integer> list10){
-        StringBuilder sb = new StringBuilder();
+    public static void print10(Thread thread,ArrayList<Integer> list10){
+        StringBuffer sb = new StringBuffer();
         sb.append(thread.getName()).append(":  ");
         for (Integer aList10 : list10) sb.append(aList10).append(" ");
         System.out.println(sb.toString());
     }
+
+    // Task3
+//    public synchronized static void print10(Thread thread,ArrayList<Integer> list10){
+//        StringBuilder sb = new StringBuilder();
+//        sb.append(thread.getName()).append(":  ");
+//        for (Integer aList10 : list10) sb.append(aList10).append(" ");
+//        System.out.println(sb.toString());
+//    }
 
 }

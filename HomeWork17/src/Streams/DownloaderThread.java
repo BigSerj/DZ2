@@ -16,11 +16,13 @@ public class DownloaderThread extends Thread {
     @Override
     public void run(){
 
-        // скачиваем JSON
-        System.out.println("Скачиваем JSON");
+        // скачиваем XML
+        System.out.println("Скачиваем XML");
         try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {}
+            HTTPUrlConnectorClass.inputStreamClass(Constants.LINK_XML);
+        } catch (Exception e) {
+            System.out.println("Ошибка чтения файла XML. \""+e.toString()+"\"");
+        }
 
         // пробуждаем поток парсера
         System.out.println("Пробуждаем поток парсера");
@@ -41,11 +43,13 @@ public class DownloaderThread extends Thread {
 
 
 
-        // скачиваем XML
-        System.out.println("Скачиваем XML");
+        // скачиваем JSON
+        System.out.println("Скачиваем JSON");
         try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {}
+            HTTPUrlConnectorClass.inputStreamClass(Constants.LINK_JSON);
+        } catch (Exception e) {
+            System.out.println("Ошибка чтения файла JSON. \""+e.toString()+"\"");
+        }
 
         // пробуждаем поток парсера
         System.out.println("Пробуждаем поток парсера");

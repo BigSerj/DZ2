@@ -1,11 +1,9 @@
-package Weather.Parse;
+package Streams;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import Weather.Constants;
-
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -13,12 +11,6 @@ import java.util.ArrayList;
 
 
 public class ParseXML implements Parse{
-
-    // переопределяем метод getPath() для ParseXML
-    @Override
-    public String getPath() {
-        return Constants.LINK_XML;
-    }
 
     // переопределяем метод parseThis() для ParseXML
     @Override
@@ -67,14 +59,14 @@ public class ParseXML implements Parse{
                     // не пустое ли поле "humidity", если да - вписываем пустое знчение, если нет - вписываем значение
                     Node humidityNode = eElement.getElementsByTagName(Constants.HUMIDITY_TAG).item(0);
                     if (humidityNode == null)
-                        weather.setHumidity(0);
+                        weather.setHumidity(-999);
                     else
                         weather.setHumidity(Integer.parseInt(humidityNode.getTextContent()));
 
                     // не пустое ли поле "id", если да - вписываем пустое знчение, если нет - вписываем значение
                     Node idNode = eElement.getElementsByTagName(Constants.ID_TAG).item(0);
                     if (idNode == null)
-                        weather.setId(0);
+                        weather.setId(-999);
                     else
                         weather.setId(Integer.parseInt(idNode.getTextContent()));
 
@@ -90,14 +82,14 @@ public class ParseXML implements Parse{
                     // не пустое ли поле "temp_max", если да - вписываем пустое знчение, если нет - вписываем значение
                     Node tempMaxNode = eElement.getElementsByTagName(Constants.TEMP_MAX_TAG).item(0);
                     if (tempMaxNode == null)
-                        weather.setTempMax(0);
+                        weather.setTempMax(-999);
                     else
                         weather.setTempMax(Integer.parseInt(tempMaxNode.getTextContent()));
 
                     // не пустое ли поле "temp_min", если да - вписываем пустое знчение, если нет - вписываем значение
                     Node tempMinNode = eElement.getElementsByTagName(Constants.TEMP_MIN_TAG).item(0);
                     if (tempMinNode == null)
-                        weather.setTempMin(0);
+                        weather.setTempMin(-999);
                     else
                         weather.setTempMin(Integer.parseInt(tempMinNode.getTextContent()));
 

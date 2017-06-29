@@ -1,4 +1,4 @@
-package Weather;
+package Streams;
 
 public class Constants {
 
@@ -8,12 +8,11 @@ public class Constants {
     public static final String LINK_ON_THIS_SYSTEM = "/Flash/JAVA for ANDROID/ex2.txt";
 
 
-    // константы tags файлов json и xml
-    public static final String ELEMENT_TAG = "element";
-
+    // константы tags файла json
     public static final String NAME_TAG = "name";
     public static final String DATE_TAG = "date";
     public static final String WEATHER_TAG = "weather";
+    public static final String ELEMENT_TAG = "element";
     public static final String ID_TAG = "id";
     public static final String TITLE_TAG = "title";
     public static final String DESCRIPTION_TAG = "description";

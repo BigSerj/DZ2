@@ -8,6 +8,10 @@ public class ParserThread extends Thread{
 
     private DownloaderThread downloaderThread;
 
+    Parse parseXML = new ParseXML();
+    Parse parseJSON = new JSONParse();
+
+
     public void setDownloaderThread(DownloaderThread downloaderThread) {
         this.downloaderThread = downloaderThread;
     }
@@ -24,11 +28,11 @@ public class ParserThread extends Thread{
             } catch (InterruptedException e) {}
         }
 
-        // парсим JSON
-        System.out.println("ParserThread - парсим JSON");
+        // парсим XML
+        System.out.println("ParserThread - парсим XML:");
         try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {}
+            System.out.println("\n\n\n"+parseXML.parseThis()+"\n\n\n");
+        } catch (Exception e) {}
 
         // пробуждаем поток скачки
         System.out.println("Пробуждаем поток скачки");
@@ -48,11 +52,11 @@ public class ParserThread extends Thread{
         }
 
 
-        // парсим XML
-        System.out.println("Парсим XML");
+        // парсим JSON
+        System.out.println("Парсим JSON:");
         try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {}
+            System.out.println("\n\n\n"+parseJSON.parseThis()+"\n\n\n");
+        } catch (Exception e) {}
 
 
 

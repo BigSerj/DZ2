@@ -1,22 +1,17 @@
-package Weather.Parse;
+package Streams;
 
 
-import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 
+// НЕ РАБОТАЕТ SERIALAZED   !!!
 
 public class Weather {
 
     private int id;
     private String title;
     private String description;
-
-    @SerializedName("temp_min")
     private int tempMin;
-
-    @SerializedName("temp_max")
     private int tempMax;
-
     private int humidity;
     private String date;
     private ArrayList<String> location;

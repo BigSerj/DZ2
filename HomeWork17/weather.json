@@ -1,0 +1,81 @@
+{
+  "name": "Super duper Weather Center",
+  "date": "2015-04-25 12:35:00 +0300",
+  "weather": [
+      {
+        "id": 0,
+        "title": "Clouds",
+        "description": "few clouds",
+        "temp_min": 0,
+        "temp_max": 2,
+        "humidity": 58,
+        "date": "04-07-2005 12:35:00 +0300",
+        "location": [
+    		  "Minsk, BY",
+     		  "Grodno, BY"
+         ]
+      },
+      {
+        "id": 1,
+        "title": "Clear",
+        "description": "Sky is Clear",
+        "temp_min": 8,
+        "temp_max": 10,
+        "humidity": 65,
+        "date": "2015-03-02 17:50:00 +0000",
+        "location": [
+    		  "London, GB"
+         ]
+      },
+	  {
+        "id": 2,
+        "title": "Rain",
+        "description": "Heavy rain",
+        "temp_min": -4,
+        "temp_max": 5,
+        "humidity": 53,
+        "date": "2015-05-02 22:50:00 +0300",
+        "location": [
+    		  "Rome, IT"
+         ]
+      },
+      {
+        "id": 3,
+        "title": "Clear",
+        "description": "Sky is Clear",
+        "temp_min": 22,
+        "temp_max": 35,
+        "humidity": 67,
+        "date": "2015-03-05 17:50:00 +0300",
+        "location": [
+    		  "Malta, ML",
+     		  "Gozo, ML"
+         ]
+      },
+      {
+        "id": 4,
+        "title": "Sunny",
+        "description": "Sunny day",
+        "temp_min": 0,
+        "temp_max": 8,
+        "humidity": 70,
+        "date": "2015-05-01 17:00:00 +0300",
+        "location": [
+    		  "Minsk, BY",
+     		  "Grodno, BY"
+         ]
+      },
+      {
+        "id": 5,
+        "title": "Clear",
+        "description": "Sky is Clears",
+        "temp_min": -4,
+        "temp_max": 6,
+        "humidity": 30,
+        "date": "2015-03-30 12:30:00 +0300",
+        "location": [
+    		  "Moscow, RU"
+         ]
+      }
+    ]
+}

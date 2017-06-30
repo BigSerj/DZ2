@@ -25,7 +25,8 @@ public class ParseXML implements Parse{
     public Root parseThis() {
         Document dom;
 
-        // открываем скачанный файл для парсинга, если ошибка - Exception ее словит и выведет соотв. сообщ-е и вернет пустой root
+        // открываем скачанный файл для парсинга,
+        // если ошибка - Exception ее словит и выведет соотв. сообщ-е и вернет пустой root
         try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
@@ -53,28 +54,37 @@ public class ParseXML implements Parse{
         NodeList nList = element.getElementsByTagName(Constants.ELEMENT_TAG);
         for (int i = 0; i < nList.getLength(); i++) {
             Node nNode = nList.item(i);
+
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement = (Element) nNode;
+
                 // отделяем element weather`а от element`а - в файле есть 2 вида данных под тэгом 'element'
+                // если очередной тэг "date" в weather`е, значит, начинаем новый элемент
                 if (eElement.getElementsByTagName(Constants.DATE_TAG).item(0)!=null) {
                     Weather weather = new Weather();
-                    weather.setDate(eElement.getElementsByTagName(Constants.DATE_TAG).item(0).getTextContent());//ставим дату
 
-                    // не пустое ли поле "description", если да - вписываем пустое знчение, если нет - вписываем значение
+                    //ставим дату
+                    weather.setDate(eElement.getElementsByTagName(Constants.DATE_TAG).item(0).getTextContent());
+
+                    // не пустое ли поле "description", если да - вписываем пустое знчение,
+                    // если нет - вписываем значение
                     Node descriptionNode = eElement.getElementsByTagName(Constants.DESCRIPTION_TAG).item(0);
-                    weather.setDescription(descriptionNode.getTextContent());
+                    if (descriptionNode == null)
+                        weather.setDescription("");
+                    else
+                        weather.setDescription(descriptionNode.getTextContent());
 
                     // не пустое ли поле "humidity", если да - вписываем пустое знчение, если нет - вписываем значение
                     Node humidityNode = eElement.getElementsByTagName(Constants.HUMIDITY_TAG).item(0);
                     if (humidityNode == null)
-                        weather.setHumidity(0);
+                        weather.setHumidity(-999);
                     else
                         weather.setHumidity(Integer.parseInt(humidityNode.getTextContent()));
 
                     // не пустое ли поле "id", если да - вписываем пустое знчение, если нет - вписываем значение
                     Node idNode = eElement.getElementsByTagName(Constants.ID_TAG).item(0);
                     if (idNode == null)
-                        weather.setId(0);
+                        weather.setId(-999);
                     else
                         weather.setId(Integer.parseInt(idNode.getTextContent()));
 
@@ -90,14 +100,14 @@ public class ParseXML implements Parse{
                     // не пустое ли поле "temp_max", если да - вписываем пустое знчение, если нет - вписываем значение
                     Node tempMaxNode = eElement.getElementsByTagName(Constants.TEMP_MAX_TAG).item(0);
                     if (tempMaxNode == null)
-                        weather.setTempMax(0);
+                        weather.setTempMax(-999);
                     else
                         weather.setTempMax(Integer.parseInt(tempMaxNode.getTextContent()));
 
                     // не пустое ли поле "temp_min", если да - вписываем пустое знчение, если нет - вписываем значение
                     Node tempMinNode = eElement.getElementsByTagName(Constants.TEMP_MIN_TAG).item(0);
                     if (tempMinNode == null)
-                        weather.setTempMin(0);
+                        weather.setTempMin(-999);
                     else
                         weather.setTempMin(Integer.parseInt(tempMinNode.getTextContent()));
 

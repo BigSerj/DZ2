@@ -19,7 +19,7 @@ public class Main{
         final Parse parseObj = SwitchParsing.switchParsingMethod();
 
         // Создаем отдельный поток для скачивания файла
-        Thread thread1 = new Thread(new Runnable(){
+        final Thread thread1 = new Thread(new Runnable(){
             @Override
             public void run() {
                 // Открываем соединение с сервером, скачиваем файл на устройство (компьютер/телефон/планшет и т.д.)
@@ -30,22 +30,30 @@ public class Main{
         // переименовываем поток
         thread1.setName("DownloadFileThread");
         // запускаем поток
-        thread1.start();
+//        thread1.start();
 
 
-        // ожидаем завершения скачивания файла
+            // ожидаем завершения скачивания файла
         System.out.println("Ожидайте окончания скачивания файла на Ваше устройство...");
-        // выполняем, пока поток не окончен
-        do {
-            System.out.println("Время ожидания: "+seconds+" сек.");
-            try {
-                thread1.join(100);
-                seconds++;
-            } catch (InterruptedException e) {
-                System.out.println("Ошибка ожидания завершения потока "+thread1.getName()+
-                        ", отвечающего за установление соединения с сервером и искачивание файла "+e.toString());
+            // выполняем, пока поток не окончен
+        Thread thread2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                do {
+                    System.out.println("Время ожидания: " + seconds + " сек.");
+                    try {
+                        seconds = 5;
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        System.out.println("Ошибка ожидания завершения потока " + thread1.getName() +
+                                ", отвечающего за установление соединения с сервером и искачивание файла " + e.toString());
+                    }
+                } while (thread1.isAlive());
             }
-        }while(thread1.isAlive());
+        });
+
+        thread1.start();
+        thread2.start();
 
 
         // парсим и выводим на экран результат

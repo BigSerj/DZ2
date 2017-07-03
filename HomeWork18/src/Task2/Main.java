@@ -21,12 +21,17 @@ public class Main {
         for(Field f:fields) {
             try {
                 f.setAccessible(true);
-                if (f.getName().equals("text"))
-                    f.set(myTest,"newName");
-                else if (f.getName().equals("a"))
-                    f.set(myTest,23);
-                else if (f.getName().equals("bool"))
-                    f.set(myTest,true);
+                switch (f.getName()) {
+                    case "text":
+                        f.set(myTest, "newName");
+                        break;
+                    case "a":
+                        f.set(myTest, 23);
+                        break;
+                    case "bool":
+                        f.set(myTest, true);
+                        break;
+                }
                 System.out.println(f.getName()+"= " + f.get(myTest));
             } catch (IllegalAccessException e) {
                 e.printStackTrace();

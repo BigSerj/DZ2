@@ -27,64 +27,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Weather/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+            <state relative-caret-position="831">
+              <caret line="63" column="1" lean-forward="true" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#617#984#0" expanded="true" />
-                <element signature="e#983#984#0" expanded="true" />
-                <element signature="e#1347#1996#0" expanded="true" />
-                <element signature="e#1995#1996#0" expanded="true" />
+                <element signature="e#650#1018#0" expanded="true" />
+                <element signature="e#1017#1018#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GSONParse.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Weather/Parse/GSONParse.java">
+      <file leaf-file-name="Root.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Weather/Parse/Root.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="26" column="79" lean-forward="false" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="79" />
+            <state relative-caret-position="525">
+              <caret line="49" column="61" lean-forward="false" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSONParse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Weather/Parse/JSONParse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1365">
-              <caret line="136" column="83" lean-forward="false" selection-start-line="136" selection-start-column="83" selection-end-line="136" selection-end-column="83" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParseXML.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Weather/Parse/ParseXML.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Weather/Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="87" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -92,41 +56,44 @@
       <file leaf-file-name="Weather.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Weather/Parse/Weather.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="801">
+              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
               <folding>
-                <element signature="e#441#442#0" expanded="false" />
-                <element signature="e#466#467#0" expanded="false" />
-                <element signature="e#499#500#0" expanded="false" />
-                <element signature="e#527#528#0" expanded="false" />
-                <element signature="e#559#560#0" expanded="false" />
-                <element signature="e#587#588#0" expanded="false" />
-                <element signature="e#629#630#0" expanded="false" />
-                <element signature="e#663#664#0" expanded="false" />
-                <element signature="e#701#702#0" expanded="false" />
-                <element signature="e#735#736#0" expanded="false" />
-                <element signature="e#789#790#0" expanded="false" />
-                <element signature="e#835#836#0" expanded="false" />
-                <element signature="e#866#867#0" expanded="false" />
-                <element signature="e#896#897#0" expanded="false" />
-                <element signature="e#939#940#0" expanded="false" />
-                <element signature="e#977#978#0" expanded="false" />
-                <element signature="e#1008#1009#0" expanded="false" />
-                <element signature="e#1038#1039#0" expanded="false" />
-                <element signature="e#1081#1082#0" expanded="false" />
-                <element signature="e#1119#1120#0" expanded="false" />
-                <element signature="e#1151#1152#0" expanded="false" />
-                <element signature="e#1182#1183#0" expanded="false" />
-                <element signature="e#1227#1228#0" expanded="false" />
-                <element signature="e#1267#1268#0" expanded="false" />
-                <element signature="e#1298#1299#0" expanded="false" />
-                <element signature="e#1325#1326#0" expanded="false" />
-                <element signature="e#1365#1366#0" expanded="false" />
-                <element signature="e#1397#1398#0" expanded="false" />
-                <element signature="e#1443#1444#0" expanded="false" />
-                <element signature="e#1474#1475#0" expanded="false" />
-                <element signature="e#1533#1534#0" expanded="false" />
-                <element signature="e#1573#1574#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DateFormatting.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Weather/DateFormatting.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Weather/Parse/Parse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GSONParse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Weather/Parse/GSONParse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-162">
+              <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,14 +102,9 @@
       <file leaf-file-name="MyExceptions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Weather/MyExceptions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="43" column="39" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="39" />
-              <folding>
-                <element signature="e#450#451#0" expanded="false" />
-                <element signature="e#479#480#0" expanded="false" />
-                <element signature="e#517#518#0" expanded="false" />
-                <element signature="e#552#553#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="427">
+              <caret line="43" column="38" lean-forward="false" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,21 +112,10 @@
       <file leaf-file-name="HTTPUrlConnectorClass.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Weather/HTTPUrlConnectorClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="127">
               <caret line="40" column="59" lean-forward="false" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SwitchParsing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Weather/Parse/SwitchParsing.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="42" />
               <folding>
-                <element signature="e#168#169#0" expanded="false" />
-                <element signature="e#197#198#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -213,21 +164,23 @@
         <option value="$PROJECT_DIR$/src/Weather/ConstantsClass.java" />
         <option value="$PROJECT_DIR$/src/Weather/LoopedMessages.java" />
         <option value="$PROJECT_DIR$/src/Weather/SigNewClass.java" />
-        <option value="$PROJECT_DIR$/src/Weather/Parse/Root.java" />
         <option value="$PROJECT_DIR$/src/Weather/Parse/Parse.java" />
         <option value="$PROJECT_DIR$/src/Weather/Parse/SwitchParsing.java" />
         <option value="$PROJECT_DIR$/src/Weather/CONSTANTS.java" />
         <option value="$PROJECT_DIR$/src/Weather/Parse/GSONParse.java" />
         <option value="$PROJECT_DIR$/weather.json" />
         <option value="$PROJECT_DIR$/src/Weather/Parse/JSONParse.java" />
-        <option value="$PROJECT_DIR$/src/Weather/MyExceptions.java" />
-        <option value="$PROJECT_DIR$/src/Weather/Parse/Weather.java" />
         <option value="$PROJECT_DIR$/src/Weather/Constants.java" />
         <option value="$PROJECT_DIR$/src/Weather/HTTPUrlConnectorClass.java" />
         <option value="$PROJECT_DIR$/src/Weather/wwwwq.java" />
         <option value="$PROJECT_DIR$/src/Weather/Main2.java" />
         <option value="$PROJECT_DIR$/weather.xml" />
         <option value="$PROJECT_DIR$/src/Weather/Parse/ParseXML.java" />
+        <option value="$PROJECT_DIR$/src/Weather/MyExceptions.java" />
+        <option value="$PROJECT_DIR$/src/Weather/DateFormating.java" />
+        <option value="$PROJECT_DIR$/src/Weather/Parse/Root.java" />
+        <option value="$PROJECT_DIR$/src/Weather/Parse/Weather.java" />
+        <option value="$PROJECT_DIR$/src/Weather/DateFormatting.java" />
         <option value="$PROJECT_DIR$/src/Weather/Main.java" />
       </list>
     </option>
@@ -240,8 +193,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="873" />
+    <option name="width" value="2560" />
+    <option name="height" value="1392" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -261,6 +214,16 @@
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FinalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="FinalProject" />
@@ -336,26 +299,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration default="false" name="JSONParse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Weather.Parse.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Weather.Parse.JSONParse" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="FinalProject" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="false" name="GSONParse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -424,6 +367,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="Weather.Main2" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="FinalProject" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="DateFormatting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Weather.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Weather.DateFormatting" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -817,19 +780,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.JSONParse" />
-      <item index="1" class="java.lang.String" itemvalue="Application.GSONParse" />
-      <item index="2" class="java.lang.String" itemvalue="Application.ParseXML" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Main2" />
+      <item index="0" class="java.lang.String" itemvalue="Application.GSONParse" />
+      <item index="1" class="java.lang.String" itemvalue="Application.ParseXML" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Main2" />
+      <item index="4" class="java.lang.String" itemvalue="Application.DateFormatting" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main2" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ParseXML" />
-        <item index="3" class="java.lang.String" itemvalue="Application.GSONParse" />
-        <item index="4" class="java.lang.String" itemvalue="Application.JSONParse" />
+        <item index="1" class="java.lang.String" itemvalue="Application.DateFormatting" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Main2" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ParseXML" />
+        <item index="4" class="java.lang.String" itemvalue="Application.GSONParse" />
       </list>
     </recent_temporary>
   </component>
@@ -849,12 +812,12 @@
       <workItem from="1498412552068" duration="6098000" />
       <workItem from="1498425681065" duration="22296000" />
       <workItem from="1498557182969" duration="50152000" />
-      <workItem from="1498817319584" duration="8328000" />
+      <workItem from="1498817319584" duration="18372000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86874000" />
+    <option name="totallyTimeSpent" value="96918000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -866,25 +829,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="1" />
+    <frame x="0" y="23" width="2560" height="1392" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32693782" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265306" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35323384" sideWeight="0.50277776" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19900498" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26455027" sideWeight="0.49722221" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19583334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.146875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -923,10 +886,8 @@
           <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#617#984#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#1347#1996#0" expanded="true" />
-            <element signature="e#1995#1996#0" expanded="true" />
+            <element signature="e#650#1018#0" expanded="true" />
+            <element signature="e#1017#1018#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -964,38 +925,7 @@
         <state relative-caret-position="255">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#441#442#0" expanded="false" />
-            <element signature="e#466#467#0" expanded="false" />
-            <element signature="e#499#500#0" expanded="false" />
-            <element signature="e#527#528#0" expanded="false" />
-            <element signature="e#559#560#0" expanded="false" />
-            <element signature="e#587#588#0" expanded="false" />
-            <element signature="e#629#630#0" expanded="false" />
-            <element signature="e#663#664#0" expanded="false" />
-            <element signature="e#701#702#0" expanded="false" />
-            <element signature="e#735#736#0" expanded="false" />
-            <element signature="e#789#790#0" expanded="false" />
-            <element signature="e#835#836#0" expanded="false" />
-            <element signature="e#866#867#0" expanded="false" />
-            <element signature="e#896#897#0" expanded="false" />
-            <element signature="e#939#940#0" expanded="false" />
-            <element signature="e#977#978#0" expanded="false" />
-            <element signature="e#1008#1009#0" expanded="false" />
-            <element signature="e#1038#1039#0" expanded="false" />
-            <element signature="e#1081#1082#0" expanded="false" />
-            <element signature="e#1119#1120#0" expanded="false" />
-            <element signature="e#1151#1152#0" expanded="false" />
-            <element signature="e#1182#1183#0" expanded="false" />
-            <element signature="e#1227#1228#0" expanded="false" />
-            <element signature="e#1267#1268#0" expanded="false" />
-            <element signature="e#1298#1299#0" expanded="false" />
-            <element signature="e#1325#1326#0" expanded="false" />
-            <element signature="e#1365#1366#0" expanded="false" />
-            <element signature="e#1397#1398#0" expanded="false" />
-            <element signature="e#1443#1444#0" expanded="false" />
-            <element signature="e#1474#1475#0" expanded="false" />
-            <element signature="e#1533#1534#0" expanded="false" />
-            <element signature="e#1573#1574#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1004,12 +934,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="43" column="39" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="39" />
-          <folding>
-            <element signature="e#450#451#0" expanded="false" />
-            <element signature="e#479#480#0" expanded="false" />
-            <element signature="e#517#518#0" expanded="false" />
-            <element signature="e#552#553#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1017,7 +942,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="40" column="59" lean-forward="false" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1026,8 +953,7 @@
         <state relative-caret-position="540">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="42" />
           <folding>
-            <element signature="e#168#169#0" expanded="false" />
-            <element signature="e#197#198#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1068,10 +994,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#617#984#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#1347#1996#0" expanded="true" />
-            <element signature="e#1995#1996#0" expanded="true" />
+            <element signature="e#650#1018#0" expanded="true" />
+            <element signature="e#1017#1018#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1081,38 +1005,7 @@
         <state relative-caret-position="960">
           <caret line="97" column="79" lean-forward="false" selection-start-line="97" selection-start-column="56" selection-end-line="97" selection-end-column="79" />
           <folding>
-            <element signature="e#441#442#0" expanded="false" />
-            <element signature="e#466#467#0" expanded="false" />
-            <element signature="e#499#500#0" expanded="false" />
-            <element signature="e#527#528#0" expanded="false" />
-            <element signature="e#559#560#0" expanded="false" />
-            <element signature="e#587#588#0" expanded="false" />
-            <element signature="e#629#630#0" expanded="false" />
-            <element signature="e#663#664#0" expanded="false" />
-            <element signature="e#701#702#0" expanded="false" />
-            <element signature="e#735#736#0" expanded="false" />
-            <element signature="e#789#790#0" expanded="false" />
-            <element signature="e#835#836#0" expanded="false" />
-            <element signature="e#866#867#0" expanded="false" />
-            <element signature="e#896#897#0" expanded="false" />
-            <element signature="e#939#940#0" expanded="false" />
-            <element signature="e#977#978#0" expanded="false" />
-            <element signature="e#1008#1009#0" expanded="false" />
-            <element signature="e#1038#1039#0" expanded="false" />
-            <element signature="e#1081#1082#0" expanded="false" />
-            <element signature="e#1119#1120#0" expanded="false" />
-            <element signature="e#1151#1152#0" expanded="false" />
-            <element signature="e#1182#1183#0" expanded="false" />
-            <element signature="e#1227#1228#0" expanded="false" />
-            <element signature="e#1267#1268#0" expanded="false" />
-            <element signature="e#1298#1299#0" expanded="false" />
-            <element signature="e#1325#1326#0" expanded="false" />
-            <element signature="e#1365#1366#0" expanded="false" />
-            <element signature="e#1397#1398#0" expanded="false" />
-            <element signature="e#1443#1444#0" expanded="false" />
-            <element signature="e#1474#1475#0" expanded="false" />
-            <element signature="e#1533#1534#0" expanded="false" />
-            <element signature="e#1573#1574#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1122,8 +1015,8 @@
         <state relative-caret-position="375">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <element signature="e#182#183#0" expanded="false" />
-            <element signature="e#242#243#0" expanded="false" />
+            <element signature="e#233#234#0" expanded="false" />
+            <element signature="e#293#294#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1132,6 +1025,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1150,38 +1044,7 @@
         <state relative-caret-position="345">
           <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
-            <element signature="e#441#442#0" expanded="false" />
-            <element signature="e#466#467#0" expanded="false" />
-            <element signature="e#499#500#0" expanded="false" />
-            <element signature="e#527#528#0" expanded="false" />
-            <element signature="e#559#560#0" expanded="false" />
-            <element signature="e#587#588#0" expanded="false" />
-            <element signature="e#629#630#0" expanded="false" />
-            <element signature="e#663#664#0" expanded="false" />
-            <element signature="e#701#702#0" expanded="false" />
-            <element signature="e#735#736#0" expanded="false" />
-            <element signature="e#789#790#0" expanded="false" />
-            <element signature="e#835#836#0" expanded="false" />
-            <element signature="e#866#867#0" expanded="false" />
-            <element signature="e#896#897#0" expanded="false" />
-            <element signature="e#939#940#0" expanded="false" />
-            <element signature="e#977#978#0" expanded="false" />
-            <element signature="e#1008#1009#0" expanded="false" />
-            <element signature="e#1038#1039#0" expanded="false" />
-            <element signature="e#1081#1082#0" expanded="false" />
-            <element signature="e#1119#1120#0" expanded="false" />
-            <element signature="e#1151#1152#0" expanded="false" />
-            <element signature="e#1182#1183#0" expanded="false" />
-            <element signature="e#1227#1228#0" expanded="false" />
-            <element signature="e#1267#1268#0" expanded="false" />
-            <element signature="e#1298#1299#0" expanded="false" />
-            <element signature="e#1325#1326#0" expanded="false" />
-            <element signature="e#1365#1366#0" expanded="false" />
-            <element signature="e#1397#1398#0" expanded="false" />
-            <element signature="e#1443#1444#0" expanded="false" />
-            <element signature="e#1474#1475#0" expanded="false" />
-            <element signature="e#1533#1534#0" expanded="false" />
-            <element signature="e#1573#1574#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1191,8 +1054,8 @@
         <state relative-caret-position="375">
           <caret line="38" column="78" lean-forward="false" selection-start-line="38" selection-start-column="71" selection-end-line="38" selection-end-column="78" />
           <folding>
-            <element signature="e#182#183#0" expanded="false" />
-            <element signature="e#242#243#0" expanded="false" />
+            <element signature="e#233#234#0" expanded="false" />
+            <element signature="e#293#294#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1251,25 +1114,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Weather/SigNewClass.java" />
     <entry file="file://$PROJECT_DIR$/src/Weather/qqq.java" />
-    <entry file="file://$PROJECT_DIR$/src/Weather/Parse/Root.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#182#183#0" expanded="false" />
-            <element signature="e#242#243#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Weather/Parse/Parse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Weather/LoopedMessages.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1299,90 +1143,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Weather/Parse/SwitchParsing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="42" />
-          <folding>
-            <element signature="e#168#169#0" expanded="false" />
-            <element signature="e#197#198#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Weather/Parse/Weather.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#441#442#0" expanded="false" />
-            <element signature="e#466#467#0" expanded="false" />
-            <element signature="e#499#500#0" expanded="false" />
-            <element signature="e#527#528#0" expanded="false" />
-            <element signature="e#559#560#0" expanded="false" />
-            <element signature="e#587#588#0" expanded="false" />
-            <element signature="e#629#630#0" expanded="false" />
-            <element signature="e#663#664#0" expanded="false" />
-            <element signature="e#701#702#0" expanded="false" />
-            <element signature="e#735#736#0" expanded="false" />
-            <element signature="e#789#790#0" expanded="false" />
-            <element signature="e#835#836#0" expanded="false" />
-            <element signature="e#866#867#0" expanded="false" />
-            <element signature="e#896#897#0" expanded="false" />
-            <element signature="e#939#940#0" expanded="false" />
-            <element signature="e#977#978#0" expanded="false" />
-            <element signature="e#1008#1009#0" expanded="false" />
-            <element signature="e#1038#1039#0" expanded="false" />
-            <element signature="e#1081#1082#0" expanded="false" />
-            <element signature="e#1119#1120#0" expanded="false" />
-            <element signature="e#1151#1152#0" expanded="false" />
-            <element signature="e#1182#1183#0" expanded="false" />
-            <element signature="e#1227#1228#0" expanded="false" />
-            <element signature="e#1267#1268#0" expanded="false" />
-            <element signature="e#1298#1299#0" expanded="false" />
-            <element signature="e#1325#1326#0" expanded="false" />
-            <element signature="e#1365#1366#0" expanded="false" />
-            <element signature="e#1397#1398#0" expanded="false" />
-            <element signature="e#1443#1444#0" expanded="false" />
-            <element signature="e#1474#1475#0" expanded="false" />
-            <element signature="e#1533#1534#0" expanded="false" />
-            <element signature="e#1573#1574#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Weather/MyExceptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="43" column="39" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="39" />
-          <folding>
-            <element signature="e#450#451#0" expanded="false" />
-            <element signature="e#479#480#0" expanded="false" />
-            <element signature="e#517#518#0" expanded="false" />
-            <element signature="e#552#553#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weather.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Weather/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Weather/HTTPUrlConnectorClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="40" column="59" lean-forward="false" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
           <folding />
         </state>
       </provider>
@@ -1398,14 +1162,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weather.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Weather/Parse/ParseXML.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -1416,26 +1172,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Weather/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Weather/Parse/SwitchParsing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        <state relative-caret-position="615">
+          <caret line="43" column="20" lean-forward="true" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#617#984#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#1347#1996#0" expanded="true" />
-            <element signature="e#1995#1996#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Weather/HTTPUrlConnectorClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="40" column="59" lean-forward="false" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FinalProject.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Weather/MyExceptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="43" column="38" lean-forward="false" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Weather/Parse/GSONParse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="26" column="79" lean-forward="false" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="79" />
+        <state relative-caret-position="-162">
+          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weather.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weather.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Weather/Parse/Parse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Weather/DateFormatting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Weather/Parse/Weather.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="801">
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Weather/Parse/Root.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="49" column="61" lean-forward="false" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Weather/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="831">
+          <caret line="63" column="1" lean-forward="true" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#650#1018#0" expanded="true" />
+            <element signature="e#1017#1018#0" expanded="true" />
           </folding>
         </state>
       </provider>

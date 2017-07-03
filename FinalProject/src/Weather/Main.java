@@ -1,13 +1,15 @@
 package Weather;
 
+import Weather.Parse.Root;
 import Weather.Parse.SwitchParsing;
 import Weather.Parse.Parse;
+
 
 
 public class Main{
 
     // счетчик времени считывания
-    static int seconds = 0;
+    volatile static float seconds = 0;
 
     public static void main(String[] args){
 
@@ -19,45 +21,41 @@ public class Main{
         final Parse parseObj = SwitchParsing.switchParsingMethod();
 
         // Создаем отдельный поток для скачивания файла
-        final Thread thread1 = new Thread(new Runnable(){
+        Thread thread1 = new Thread(new Runnable(){
             @Override
             public void run() {
                 // Открываем соединение с сервером, скачиваем файл на устройство (компьютер/телефон/планшет и т.д.)
                 HTTPUrlConnectorClass.inputStreamClass(parseObj.getPath());
-                System.out.println("\nЗагрузка файла заняла: "+seconds+"сек.\n");
+                System.out.println("\nЗагрузка файла заняла: "+seconds+" сек.\n");
             }
         });
         // переименовываем поток
         thread1.setName("DownloadFileThread");
         // запускаем поток
-//        thread1.start();
-
-
-            // ожидаем завершения скачивания файла
-        System.out.println("Ожидайте окончания скачивания файла на Ваше устройство...");
-            // выполняем, пока поток не окончен
-        Thread thread2 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                do {
-                    System.out.println("Время ожидания: " + seconds + " сек.");
-                    try {
-                        seconds = 5;
-                        Thread.sleep(100);
-                    } catch (InterruptedException e) {
-                        System.out.println("Ошибка ожидания завершения потока " + thread1.getName() +
-                                ", отвечающего за установление соединения с сервером и искачивание файла " + e.toString());
-                    }
-                } while (thread1.isAlive());
-            }
-        });
-
         thread1.start();
-        thread2.start();
 
 
-        // парсим и выводим на экран результат
-        System.out.println(parseObj.parseThis());
+        // ожидаем завершения скачивания файла
+        System.out.println("Ожидайте окончания скачивания файла на Ваше устройство...");
+        // выполняем, пока поток не окончен
+        do {
+            System.out.println("Время ожидания: "+seconds+" сек.");
+            try {
+                thread1.join(100);
+                seconds+=0.1f;
+            } catch (InterruptedException e) {
+                System.out.println("Ошибка ожидания завершения потока "+thread1.getName()+
+                        ", отвечающего за установление соединения с сервером и искачивание файла "+e.toString());
+            }
+        }while(thread1.isAlive());
+
+
+        // парсим
+        Root root = parseObj.parseThis();
+
+        System.out.println("\n============================================================\n");
+
+        System.out.println(root);
 
 
     }

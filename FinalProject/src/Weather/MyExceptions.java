@@ -40,8 +40,8 @@ public class MyExceptions extends Exception{
 
 
     public void getRussianMessage(int j){
-        System.out.println("Ошибка чтения поля данных \""+codeExString+"\" в элементе массива \""+Constants.WEATHER_TAG+
-                "\" № "+(j+1)+". Ошибка: \""+ ex.toString()+"\"");
+        System.out.println("Ошибка чтения поля данных \""+codeExString+"\" в элементе массива \""+
+                Constants.WEATHER_TAG+"\" № "+(j+1)+". Ошибка: \""+ ex.toString()+"\"");
     }
 
 

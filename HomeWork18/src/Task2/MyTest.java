@@ -6,15 +6,15 @@ public class MyTest {
     private String text;
     private Boolean bool;
 
-    public int getA() {
+    private int getA() {
         return a;
     }
 
-    public String getText() {
+    private String getText() {
         return text;
     }
 
-    public Boolean getBool() {
+    private Boolean getBool() {
         return bool;
     }
 }

@@ -4,6 +4,8 @@ package Weather.Parse;
 import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 
+import static Weather.DateFormatting.convertDate;
+
 
 public class Weather {
 
@@ -94,7 +96,7 @@ public class Weather {
     public String toString() {
         return "\nWeather [\nid=" + id+ ", \ntitle=" + title + ", \ndescription="
                 + description + ", \ntempMin=" + tempMin + ", \ntempMax=" + tempMax + ", \nhumidity=" + humidity +
-                ", \ndate=" + date + ", \nlocation [" + locationPrint(location) + "]\n]";
+                ", \ndate=" + convertDate(date) + ", \nlocation [" + locationPrint(location) + "]\n]";
     }
 
     // метод вывода на экран значений корзины location

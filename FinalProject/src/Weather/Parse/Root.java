@@ -2,6 +2,8 @@ package Weather.Parse;
 
 import java.util.ArrayList;
 
+import static Weather.DateFormatting.convertDate;
+
 public class Root {
 
     // делаем Root singleton
@@ -45,7 +47,7 @@ public class Root {
 
     @Override
     public String toString() {
-        return "Root (name=" + name + ", date=" + date + ",weather=" + weather + ")";
+        return "Root (name=" + name + ", date=" + convertDate(date)+ ",weather=" + weather + ")";
     }
 
 

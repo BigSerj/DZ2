@@ -1,17 +1,20 @@
 package Weather.ExceptionsMessages;
 
+
 import Weather.Constants;
+import Weather.EnumMessage;
+
 
 public class MyExceptions extends Exception{
 
     // переменная для кода ошибки
-    private int codeEx;
+    private EnumMessage codeEx;
     private String codeExString;
     private Exception ex;
 
 
     // конструктор
-    public MyExceptions(int codeEx) {
+    public MyExceptions(EnumMessage codeEx) {
         this.codeEx = codeEx;
     }
     public MyExceptions(String codeExString,Exception ex) {
@@ -20,25 +23,17 @@ public class MyExceptions extends Exception{
     }
 
 
-    // геттеры
-    public int getCodeEx() {
-        return codeEx;
-    }
-    public String getCodeExString() {
-        return codeExString;
-    }
-
     // создаем метод со своими сообщениями об ошибках
     public void getRussianMessage(){
         switch (codeEx) {
-            case 1:
+            case ENTER_INTEGER:
                 System.out.println("Введите целое число!");
                 break;
-            case 101:
+            case STRING_TO_DATE_EXC:
                 System.out.println("Ошибка при конвертации формата даты из String в Date.\n");
                 break;
             default:
-                System.out.println(LoopedMessages.sbMethod(codeEx).toString());
+                System.out.println(MessagesControlCentre.sbMethod(codeEx));
         }
     }
 

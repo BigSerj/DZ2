@@ -1,5 +1,6 @@
 package Weather;
 
+
 public class Constants {
 
     // объявляем константы c ссылками
@@ -21,5 +22,6 @@ public class Constants {
     public static final String TEMP_MAX_TAG = "temp_max";
     public static final String HUMIDITY_TAG = "humidity";
     public static final String LOCATION_TAG = "location";
+
 
 }

@@ -1,15 +1,12 @@
 package Weather.ParseAndHTTPConnection;
 
+
 import java.io.FileReader;
 import java.util.ArrayList;
-import Weather.Constants;
+import Weather.*;
 import Weather.ExceptionsMessages.MyExceptions;
-
-import Weather.Root;
-import Weather.Weather;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import org.json.simple.*;
 
 
 public class JSONParse implements Parse {
@@ -32,8 +29,8 @@ public class JSONParse implements Parse {
 
         try {
             // создаем объект распарсенного файла для его последующего разбора
-//            JSONObject rootObj = (JSONObject)parser.parse(new FileReader(Constants.LINK_ON_THIS_SYSTEM));
-            JSONObject rootObj = (JSONObject)parser.parse(new FileReader("weather.json"));
+            JSONObject rootObj = (JSONObject)parser.parse(new FileReader(Constants.LINK_ON_THIS_SYSTEM));
+//            JSONObject rootObj = (JSONObject)parser.parse(new FileReader("weather.json"));
 
             // считываем name в root
             String name = (String)rootObj.get(Constants.NAME_TAG);

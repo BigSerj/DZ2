@@ -1,6 +1,5 @@
 package Weather.ParseAndHTTPConnection;
 
-import Weather.Root;
 
 public interface Parse {
 

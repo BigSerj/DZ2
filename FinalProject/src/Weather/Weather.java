@@ -3,8 +3,7 @@ package Weather;
 
 import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
-
-import static Weather.DateMethods.convertDate;
+import static Weather.DateMethods.*;
 
 
 public class Weather {
@@ -77,7 +76,7 @@ public class Weather {
     }
 
     public void setDate(String date) {
-        this.date = date;
+        this.date = checkDate(date);
     }
 
     public ArrayList<String> getLocation() {

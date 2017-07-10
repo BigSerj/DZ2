@@ -1,11 +1,10 @@
 package Weather.ParseAndHTTPConnection;
 
-import Weather.Root;
-import com.google.gson.Gson;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import Weather.Constants;
+import Weather.*;
+import com.google.gson.Gson;
+import java.io.*;
+import java.util.ArrayList;
 
 
 public class GSONParse implements Parse{
@@ -31,7 +30,10 @@ public class GSONParse implements Parse{
             Root root = Root.getInstance();
             root.setName(root1.getName());
             root.setDate(root1.getDate());
-            root.setWeather(root1.getWeather());
+            // делаем проверку корректности даты, перезаписывая дату каждого элемента weather
+            ArrayList<Weather> weather = root1.getWeather();
+            for (Weather aWeather : weather) aWeather.setDate(aWeather.getDate());
+            root.setWeather(weather);
         }catch (Exception e){
             System.out.println("Ошбика чтения .json файла " + e.toString());
         }

@@ -4,6 +4,7 @@ package Weather;
 import java.util.ArrayList;
 import static Weather.DateMethods.convertDate;
 
+
 public class Root {
 
     // делаем Root singleton

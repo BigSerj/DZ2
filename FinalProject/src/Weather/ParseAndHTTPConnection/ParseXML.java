@@ -1,16 +1,9 @@
 package Weather.ParseAndHTTPConnection;
 
-import Weather.Root;
-import Weather.Weather;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import Weather.Constants;
 
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
+import Weather.*;
+import org.w3c.dom.*;
+import javax.xml.parsers.*;
 import java.util.ArrayList;
 
 
@@ -32,8 +25,8 @@ public class ParseXML implements Parse{
         try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
-//            dom = db.parse(Constants.LINK_ON_THIS_SYSTEM);
-            dom = db.parse("weather.xml");
+            dom = db.parse(Constants.LINK_ON_THIS_SYSTEM);
+//            dom = db.parse("weather.xml");
         }catch (Exception e){
             System.out.println("Ошибка открытия файла .xml "+e.toString());
             return;
@@ -91,12 +84,19 @@ public class ParseXML implements Parse{
                     else
                         weather.setId(Integer.parseInt(idNode.getTextContent()));
 
+
                     // создаем и заполняем лист с "location" очередного элемента weather
-                    NodeList locationNodeList = eElement.getElementsByTagName(Constants.LOCATION_TAG);
                     ArrayList<String> locationNodeArray = new ArrayList<>();
-                    for (int j=0;j<locationNodeList.getLength();j++)
-                        if (locationNodeList.item(j).getNodeType()==Node.ELEMENT_NODE)
-                            locationNodeArray.add(locationNodeList.item(j).getTextContent());
+
+                    Node nnNode = eElement.getElementsByTagName(Constants.LOCATION_TAG).item(0);
+                    if (nnNode == null)
+                        locationNodeArray.add("");
+                    else {
+                        Element eeElement = (Element) nnNode;
+                        NodeList nodeListElem = eeElement.getElementsByTagName(Constants.ELEMENT_TAG);
+                        for (int k=0;k<nodeListElem.getLength();k++)
+                            locationNodeArray.add(nodeListElem.item(k).getTextContent());
+                    }
                     weather.setLocation(locationNodeArray);
 
 

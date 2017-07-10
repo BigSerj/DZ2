@@ -1,26 +1,42 @@
 package Weather;
 
-import Weather.ExceptionsMessages.LoopedMessages;
+
+import Weather.ExceptionsMessages.MessagesControlCentre;
 import Weather.ParseAndHTTPConnection.*;
-import static Weather.ScannerInputProcessing.*;
+import java.util.ArrayList;
+import static Weather.DateMethods.convertDate;
+import static Weather.ScannerInputMethods.SearchCityByRangeOfTemp.searchCityByRangeOfTemp;
+import static Weather.ScannerInputMethods.SearchMiddleMaxTempInRegion.searchMiddleMaxTempInRegion;
+import static Weather.ScannerInputMethods.SetCityForSearchWeather.setCityForSearchWeather;
+import static Weather.ScannerInputMethods.SetDateForSearch.setDateForSearch;
+import static Weather.ScannerInputMethods.SetDatePeriodForSearch.setDatePeriodForSearch;
+import static Weather.ScannerInputMethods.SortingByTempAndHumidity.sortingByTempAndHumidity;
+import static Weather.ScannerInputMethods.ScannerInTryCatchMethods.scannerToString;
 
 
 public class Main {
 
     // счетчик времени считывания
-    private volatile static int seconds = 0;
+    private volatile static int seconds;
     private volatile static boolean exc = true;
 
     public static void main(String[] args) {
 
         // Выводим вводное сообщение
-        System.out.println("========================================================================================================================");
-        System.out.println(LoopedMessages.sbMethod(1));
-        while (true){
-            System.out.println(LoopedMessages.sbMethod(2));
+        System.out.println(MessagesControlCentre.sbMethod(EnumMessage.MAIN_MENU_HELLO));
+        while (true) {
+            System.out.println(MessagesControlCentre.sbMethod(EnumMessage.MAIN_MENU_SWITCH_PARSING));
 
             // Создаем объект для парсинга. Выбираем вид парсинга, вводим значения с клавиатуры, ловим Exceptions
-            Parse parseObj = switchParse();
+            Parse parseObj = null;
+            switch (scannerToString()) {
+                case 1:
+                    parseObj = new JSONParse();break;
+                case 2:
+                    parseObj = new GSONParse();break;
+                case 3:
+                    parseObj = new ParseXML();
+            }
 
             // Создаем отдельный поток для скачивания файла
             final Parse finalParseObj = parseObj;
@@ -28,23 +44,24 @@ public class Main {
                 @Override
                 public void run() {
                     // Открываем соединение с сервером, скачиваем файл на устройство (компьютер/телефон/планшет и т.д.)
-                if (!HTTPUrlConnectorClass.inputStreamClass(finalParseObj.getPath()))
-                    exc = false;
-                else
-                    System.out.println("Загрузка файла заняла: " + seconds + " сек.\n");
+                    if (!HTTPUrlConnectorClass.inputStreamClass(finalParseObj.getPath()))
+                        exc = false;
+                    else System.out.println("Загрузка файла заняла: " + seconds + " сек.\n");
 
                 }
             });
             // переименовываем поток
             thread1.setName("DownloadFileThread");
             // запускаем поток
-            
-            //thread1.start();
+            // комментим - если надо оффлайн, и в ParseXML далаем вместо url - dom = db.parse("weather.xml");
+//            thread1.start();
+            thread1.start();
 
 
             // ожидаем завершения скачивания файла
             System.out.println("\nОжидайте окончания скачивания файла на Ваше устройство...");
             // выполняем, пока поток не окончен
+            seconds = 0;
             do {
                 System.out.println("Время ожидания: " + seconds + " сек.");
                 try {
@@ -57,7 +74,6 @@ public class Main {
             } while (thread1.isAlive());
 
 
-
             // проверка на наличие ошибо
             // тут надо реализовать Observer !!!!  паттерн для слежением появления ошибки при открытии,
             // скачивании, парсинге файлов.
@@ -66,60 +82,55 @@ public class Main {
                 break;
 
 
-
             // парсим
             parseObj.parsing();
-            System.out.println("========================================================================================================================");
+
             // Выбираем, что вывести на экран (дату/период/все)
-            System.out.println(LoopedMessages.sbMethod(3));
-            System.out.println(switchWeatherView());
-            System.out.println("========================================================================================================================\n");
-
+            System.out.println(MessagesControlCentre.sbMethod(EnumMessage.MAIN_MENU_SWITCH_TASK));
+            switch (scannerToString()) {
+                case 1:
+                    toScreen(setDateForSearch());
+                    break;
+                case 2:
+                    toScreen(setDatePeriodForSearch());
+                    break;
+                case 3:
+                    toScreen(Root.getInstance().getWeather());
+                    break;
+                case 4:
+                    toScreen(setCityForSearchWeather());
+                    break;
+                case 5:
+                    toScreen(sortingByTempAndHumidity());
+                    break;
+                case 6:
+                    toScreen2(searchCityByRangeOfTemp());
+                    break;
+                case 7:
+                    toScreen3(searchMiddleMaxTempInRegion());
+            }
 
 
 
         }
     }
 
-
-
-
-
-
-
-
-
-
-    // В зависимости от выбранного вида парсинга создаем соотв. объект и возвращаем его в Main
-    private static Parse switchParse() {
-        switch (switch123()) {
-            case 1:
-                return new JSONParse();
-            case 2:
-                return new GSONParse();
-            case 3:
-                return new ParseXML();
-        }
-        return null;
+    // метод для вывода на экран
+    private static void toScreen(ArrayList<Weather> newWeather){
+        System.out.println("Root (name=" + Root.getInstance().getName() + ", date=" +
+                convertDate(Root.getInstance().getDate()) + ", weather=" + newWeather + ")");
     }
-
-
-    // метод для выбора отображения на экране
-    private static String switchWeatherView() {
-        switch (switch123()) {
-            case 1:
-                return setDateForSearch();
-            case 2:
-                return setDatePeriodForSearch();
-            case 3:
-                return Root.getInstance().toString();
-            case 4:
-                return setCityForSearchWeather();
-        }
-        return null;
+    private static void toScreen2(ArrayList<String> locationFind){
+        System.out.println(locationFind);
     }
-
+    private static void toScreen3(Integer[] locationFind){
+        System.out.println("Средняя температура по ргеиону = " + locationFind[0]);
+        System.out.println("Максимальная температура по ргеиону = " + locationFind[1]);
+    }
 
 
 
 }
+
+// если иключение в catch - это блок catch игнорируется и выполняется finally.
+// Если и в finally исключение - тогда ошибка.

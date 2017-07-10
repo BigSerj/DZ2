@@ -1,10 +1,8 @@
 package Weather.ParseAndHTTPConnection;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
+
+import java.io.*;
+import java.net.*;
 import Weather.Constants;
 
 

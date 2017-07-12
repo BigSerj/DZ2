@@ -13,7 +13,7 @@ import static weatherAPI.presentation.menu.ControlCentreMenu.showCurrentMenu;
 
 public class SearchMiddleMaxTempInRegion {
 
-    public static Integer[] searchMiddleMaxTempInRegion(){
+    public Integer[] searchMiddleMaxTempInRegion(){
         System.out.println(showCurrentMenu(MENU_FIND_MIDDLE_MAX_TEMP_IN_REGION));
 
         // вводим искомый регион
@@ -24,22 +24,22 @@ public class SearchMiddleMaxTempInRegion {
         middleMaxTemp[1]=-999;
         ArrayList<Weather> weathers = DataManager.getInstance().getRoot().getWeather();
         // прогоняем каждый элемент weather`а
-        for (int i=0;i<weathers.size();i++){
+        for (Weather weather : weathers) {
             // если нашли регион, который вводили, и температуры элементов корректные - рассчитываем
-            if (weathers.get(i).getLocation().get(0).endsWith(searchRegion) && weathers.get(i).getTempMax()!=-999
-                    && weathers.get(i).getTempMin()!=-999){
+            if (weather.getLocation().get(0).endsWith(searchRegion) && weather.getTempMax() != -999
+                    && weather.getTempMin() != -999) {
                 // если считаем первый раз
-                if (middleMaxTemp[0]==-999){
-                    middleMaxTemp[0]=(weathers.get(i).getTempMax() + weathers.get(i).getTempMin()) / 2;
-                    middleMaxTemp[1]=weathers.get(i).getTempMax();
-                // если творой и более
-                }else {
+                if (middleMaxTemp[0] == -999) {
+                    middleMaxTemp[0] = (weather.getTempMax() + weather.getTempMin()) / 2;
+                    middleMaxTemp[1] = weather.getTempMax();
+                    // если творой и более
+                } else {
                     // находим среднюю температуру
-                    middleMaxTemp[0] = (middleMaxTemp[0] + (weathers.get(i).getTempMax() +
-                            weathers.get(i).getTempMin()) / 2) / 2;
+                    middleMaxTemp[0] = (middleMaxTemp[0] + (weather.getTempMax() +
+                            weather.getTempMin()) / 2) / 2;
                     // находим максимальную температуру
-                    if (weathers.get(i).getTempMax() > middleMaxTemp[1])
-                        middleMaxTemp[1] = weathers.get(i).getTempMax();
+                    if (weather.getTempMax() > middleMaxTemp[1])
+                        middleMaxTemp[1] = weather.getTempMax();
                 }
             }
         }

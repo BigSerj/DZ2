@@ -34,7 +34,6 @@ public class SetDatePeriodForSearch extends SuperTask{
             if (!weather.getDate().equals(DATE_WRONG_FORMAT) &&
                     convertStringToDate2(searchDate1).before(convertStringToDate(weather.getDate())) &&
                     convertStringToDate2(searchDate2).after(convertStringToDate(weather.getDate()))) {
-                weather.getDate();
                 weathers2.add(weather);
             }
         }

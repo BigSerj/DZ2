@@ -8,12 +8,9 @@ import weatherAPI.domain.tasks.task1.SetDateForSearch;
 import weatherAPI.domain.tasks.task2.SetDatePeriodForSearch;
 import weatherAPI.domain.tasks.task4.SetCityForSearchWeather;
 import weatherAPI.domain.tasks.task5.SortingByTempAndHumidity;
-import weatherAPI.presentation.menu.ControlCentreMenu;
-import weatherAPI.presentation.menu.ShowResult;
-import weatherAPI.presentation.menu.ShowResultController;
-
-import static weatherAPI.domain.tasks.task6.SearchCityByRangeOfTemp.searchCityByRangeOfTemp;
-import static weatherAPI.domain.tasks.task7.SearchMiddleMaxTempInRegion.searchMiddleMaxTempInRegion;
+import weatherAPI.domain.tasks.task6.SearchCityByRangeOfTemp;
+import weatherAPI.domain.tasks.task7.SearchMiddleMaxTempInRegion;
+import weatherAPI.presentation.menu.*;
 import static weatherAPI.presentation.constants.MessagesConst.*;
 import static weatherAPI.presentation.menu.Constants.*;
 import static weatherAPI.presentation.menu.ControlCentreMenu.showCurrentMenu;
@@ -125,10 +122,10 @@ public class Main {
                     controller.updateView1(new SortingByTempAndHumidity().setSomeScannerTask1Task5());
                     break;
                 case 6:
-                    controller.updateView2(searchCityByRangeOfTemp());
+                    controller.updateView2(new SearchCityByRangeOfTemp().searchCityByRangeOfTemp());
                     break;
                 case 7:
-                    controller.updateView3(searchMiddleMaxTempInRegion());
+                    controller.updateView3(new SearchMiddleMaxTempInRegion().searchMiddleMaxTempInRegion());
             }
 
         }

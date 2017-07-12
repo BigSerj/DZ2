@@ -12,17 +12,19 @@ import static weatherAPI.presentation.menu.ControlCentreMenu.showCurrentMenu;
 public class ShowResult {
 
     // методы для вывода на экран
-    public void toScreenMain(){
+    void toScreenMain(){
         System.out.println(showCurrentMenu(MAIN_MENU_SWITCH_TASK));
     }
-    public void toScreen(ArrayList<Weather> newWeather){
+    void toScreen(ArrayList<Weather> newWeather){
         System.out.println("parsed (name=" + DataManager.getInstance().getRoot().getName() + ", date=" +
                 convertDate(DataManager.getInstance().getRoot().getDate()) + ", weather=" + newWeather + ")");
     }
-    public void toScreen2(ArrayList<String> locationFind){
+    void toScreen2(ArrayList<String> locationFind) {
+        if (locationFind.isEmpty())
+            locationFind.add("Нет городов с искомой температурой.");
         System.out.println(locationFind);
     }
-    public void toScreen3(Integer[] locationFind){
+    void toScreen3(Integer[] locationFind){
         System.out.println("Средняя температура по ргеиону = " + locationFind[0]);
         System.out.println("Максимальная температура по ргеиону = " + locationFind[1]);
     }

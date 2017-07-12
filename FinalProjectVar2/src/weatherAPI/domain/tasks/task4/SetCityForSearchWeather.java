@@ -27,8 +27,8 @@ public class SetCityForSearchWeather extends SuperTask{
 
             for (Weather weather : weathers) {
                 ArrayList<String> location = weather.getLocation();
-                for (int aLocation=0;aLocation<location.size();aLocation++) {
-                    if (location.get(aLocation).startsWith(searchCity))
+                for (String aLocation1 : location) {
+                    if (aLocation1.startsWith(searchCity))
                         weathers2.add(weather);
                 }
             }

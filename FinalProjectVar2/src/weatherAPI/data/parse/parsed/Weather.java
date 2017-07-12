@@ -2,9 +2,7 @@ package weatherAPI.data.parse.parsed;
 
 
 import com.google.gson.annotations.SerializedName;
-
 import java.util.ArrayList;
-
 import static weatherAPI.domain.checks.Dates.checkDate;
 import static weatherAPI.domain.checks.Dates.convertDate;
 
@@ -24,6 +22,7 @@ public class Weather {
     private int humidity;
     private String date;
     private ArrayList<String> location;
+
 
 
     public int getId() {

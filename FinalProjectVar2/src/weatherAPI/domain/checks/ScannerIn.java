@@ -28,11 +28,10 @@ public class ScannerIn {
                 }
                 // если мы не в меню нахождения по диапазону температур
                 if (getCurrentMenu() != MENU_FIND_CITY_BY_RANGE_OF_TEMP &&
-                        i < 1 || i > ControlCentreMenu.getInstance().getMessagesListInHashMap().getHashMapOfMessages()
-                        .get(getCurrentMenu()).size())
-                        throw new MyExceptions(getCurrentMenu());
-                else
-                    return i;
+                        (i < 1 || i > ControlCentreMenu.getInstance().getMessagesListInHashMap().getHashMapOfMessages()
+                        .get(getCurrentMenu()).size()))
+                    throw new MyExceptions(getCurrentMenu());
+                return i;
             } catch (MyExceptions e) {
                 // ловим тут и передаем на вывод на экран
                 e.getRussianMessage();

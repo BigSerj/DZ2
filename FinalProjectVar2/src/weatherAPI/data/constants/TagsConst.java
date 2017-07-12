@@ -17,5 +17,4 @@ public class TagsConst {
     public static final String HUMIDITY_TAG = "humidity";
     public static final String LOCATION_TAG = "location";
 
-
 }

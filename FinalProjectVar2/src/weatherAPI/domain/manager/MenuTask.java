@@ -1,10 +1,7 @@
 package weatherAPI.domain.manager;
 
 
-import weatherAPI.data.controlData.DataManager;
-import weatherAPI.data.parse.parsed.Weather;
 import weatherAPI.presentation.constants.MessagesConst;
-
 import static weatherAPI.domain.checks.ScannerIn.scannerToString;
 
 

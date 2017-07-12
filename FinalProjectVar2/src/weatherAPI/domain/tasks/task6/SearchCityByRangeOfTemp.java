@@ -13,7 +13,7 @@ import static weatherAPI.presentation.menu.ControlCentreMenu.showCurrentMenu;
 
 public class SearchCityByRangeOfTemp {
 
-    public static ArrayList<String> searchCityByRangeOfTemp() {
+    public ArrayList<String> searchCityByRangeOfTemp() {
         System.out.println(showCurrentMenu(MENU_FIND_CITY_BY_RANGE_OF_TEMP));
 
         // вводим искомую температуру
@@ -22,15 +22,15 @@ public class SearchCityByRangeOfTemp {
         ArrayList<String> location = new ArrayList<>();
         ArrayList<Weather> weathers = DataManager.getInstance().getRoot().getWeather();
         // прогоняем каждый элемент weather`а
-        for (int i=0;i<weathers.size();i++){
+        for (Weather weather : weathers) {
             // если температура входит в диапазон температур элемента
-            if (searchTemp>=weathers.get(i).getTempMin() && searchTemp<=weathers.get(i).getTempMax()){
+            if (searchTemp >= weather.getTempMin() && searchTemp <= weather.getTempMax()) {
                 // прогоняем каждый город элемента
-                for (int j=0;j<weathers.get(i).getLocation().size();j++) {
+                for (int j = 0; j < weather.getLocation().size(); j++) {
                     Boolean thisCycleBreak = false;
                     // прогоняем каждый элемент нового массива городов
                     for (String aLocation : location) {
-                        if (aLocation.equals(weathers.get(i).getLocation().get(j))) {
+                        if (aLocation.equals(weather.getLocation().get(j))) {
                             thisCycleBreak = true;
                             break;
                         }
@@ -39,12 +39,10 @@ public class SearchCityByRangeOfTemp {
                     if (thisCycleBreak)
                         break;
                     // если небыло такого города - запоминаем
-                    location.add(weathers.get(i).getLocation().get(j));
+                    location.add(weather.getLocation().get(j));
                 }
             }
         }
-        if (location.isEmpty())
-            location.add("Нет городов с искомой температурой.");
         return location;
     }
 

@@ -9,5 +9,3 @@ public interface Parse {
     void parsing();
 
 }
-// Factory Method
-// Observer

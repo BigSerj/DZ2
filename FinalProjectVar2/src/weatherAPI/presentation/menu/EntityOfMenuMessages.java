@@ -19,7 +19,7 @@ public class EntityOfMenuMessages {
     }
 
     // забиваем все коллекции сообщениями
-    public EntityOfMenuMessages() {
+    EntityOfMenuMessages() {
 
         // создаем объект с листами сообщений
         hashMapOfMessages.put(MAIN_MENU_SWITCH_PARSING,forConstructorParse());

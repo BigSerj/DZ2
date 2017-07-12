@@ -126,8 +126,6 @@ public class Main {
                     toScreen3(searchMiddleMaxTempInRegion());
             }
 
-
-
         }
     }
 

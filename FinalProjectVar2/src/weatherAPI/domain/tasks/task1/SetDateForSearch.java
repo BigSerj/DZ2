@@ -3,21 +3,22 @@ package weatherAPI.domain.tasks.task1;
 
 import weatherAPI.data.controlData.DataManager;
 import weatherAPI.data.parse.parsed.Weather;
-import weatherAPI.presentation.constants.MessagesConst;
+import weatherAPI.domain.tasks.superTask.SuperTask;
 
 import java.util.ArrayList;
 
 import static weatherAPI.domain.checks.Dates.getSearchDateMethod;
 import static weatherAPI.domain.checks.ScannerIn.scannerStringToDate;
+import static weatherAPI.presentation.constants.MessagesConst.*;
 import static weatherAPI.presentation.menu.ControlCentreMenu.showCurrentMenu;
 
 
-public class SetDateForSearch {
+public class SetDateForSearch extends SuperTask{
 
 
     // метод для ввода искомого числа для вывода на экран
-    public static ArrayList<Weather> setDateForSearch() {
-        System.out.println(showCurrentMenu(MessagesConst.MENU_FIND_BY_DATE));
+    public ArrayList<Weather> setSomeScannerTask1Task5() {
+        System.out.println(showCurrentMenu(MENU_FIND_BY_DATE));
 
         // проверяем корректность ввода даты
         String inDate = scannerStringToDate(0);
@@ -31,6 +32,5 @@ public class SetDateForSearch {
         }
         return weathers2;
     }
-
 
 }

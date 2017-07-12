@@ -3,18 +3,18 @@ package weatherAPI.domain.tasks.task7;
 
 import weatherAPI.data.controlData.DataManager;
 import weatherAPI.data.parse.parsed.Weather;
-import weatherAPI.presentation.constants.MessagesConst;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static weatherAPI.presentation.constants.MessagesConst.*;
 import static weatherAPI.presentation.menu.ControlCentreMenu.showCurrentMenu;
 
 
 public class SearchMiddleMaxTempInRegion {
 
     public static Integer[] searchMiddleMaxTempInRegion(){
-        System.out.println(showCurrentMenu(MessagesConst.MENU_FIND_MIDDLE_MAX_TEMP_IN_REGION));
+        System.out.println(showCurrentMenu(MENU_FIND_MIDDLE_MAX_TEMP_IN_REGION));
 
         // вводим искомый регион
         String searchRegion = new Scanner(System.in).next();

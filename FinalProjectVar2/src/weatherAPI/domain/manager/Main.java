@@ -4,15 +4,14 @@ package weatherAPI.domain.manager;
 import weatherAPI.data.controlData.DataManager;
 import weatherAPI.data.net.HTTPUrlConnector;
 import weatherAPI.data.parse.parsers.Parse;
-import weatherAPI.domain.tasks.common.MenuTask;
+import weatherAPI.domain.tasks.task1.SetDateForSearch;
+import weatherAPI.domain.tasks.task2.SetDatePeriodForSearch;
+import weatherAPI.domain.tasks.task4.SetCityForSearchWeather;
+import weatherAPI.domain.tasks.task5.SortingByTempAndHumidity;
 import weatherAPI.presentation.menu.ControlCentreMenu;
 import weatherAPI.presentation.menu.ShowResult;
 import weatherAPI.presentation.menu.ShowResultController;
 
-import static weatherAPI.domain.tasks.task1.SetDateForSearch.setDateForSearch;
-import static weatherAPI.domain.tasks.task2.SetDatePeriodForSearch.setDatePeriodForSearch;
-import static weatherAPI.domain.tasks.task4.SetCityForSearchWeather.setCityForSearchWeather;
-import static weatherAPI.domain.tasks.task5.SortingByTempAndHumidity.sortingByTempAndHumidity;
 import static weatherAPI.domain.tasks.task6.SearchCityByRangeOfTemp.searchCityByRangeOfTemp;
 import static weatherAPI.domain.tasks.task7.SearchMiddleMaxTempInRegion.searchMiddleMaxTempInRegion;
 import static weatherAPI.presentation.constants.MessagesConst.*;
@@ -37,6 +36,9 @@ public class Main {
         // создаем объект-singleton для управления сообщениями
         ControlCentreMenu.getInstance();
 
+        // создаем объект-singleton для управления работой с данными
+        DataManager dataManager = DataManager.getInstance();
+
         // вечный цикл
         while (true) {
 
@@ -44,12 +46,10 @@ public class Main {
             System.out.println(showCurrentMenu(MAIN_MENU_SWITCH_PARSING));
 
             // Создаем объект для парсинга. Выбираем вид парсинга, вводим значения с клавиатуры, ловим exceptions
-            // создаем объект-singleton для управления работой с данными
-            DataManager dataManager = DataManager.getInstance();
-            // устанавливаем новый парсинг файла
+            // устанавливаем новый вид парсинга файла
             dataManager.setParser();
-            // присваиваем окальной переменной это вид парсинга
-            Parse parseObj = DataManager.getInstance().getParser();
+            // присваиваем локальной переменной этот вид парсинга
+            Parse parseObj = dataManager.getParser();
 
 
 
@@ -105,23 +105,24 @@ public class Main {
             // Создаем объект контроллер
             ShowResultController controller = new ShowResultController(view,model);
 
+            // выводим на экран сообщение о выборе меню
             controller.updateViewMain();
             controller.setModelMenuInputNumber();
             switch (controller.getModelMenuInputNumber()) {
                 case 1:
-                    controller.updateView1(setDateForSearch());
+                    controller.updateView1(new SetDateForSearch().setSomeScannerTask1Task5());
                     break;
                 case 2:
-                    controller.updateView1(setDatePeriodForSearch());
+                    controller.updateView1(new SetDatePeriodForSearch().setSomeScannerTask1Task5());
                     break;
                 case 3:
-                    controller.updateView1(DataManager.getInstance().getRoot().getWeather());
+                    controller.updateView1(dataManager.getRoot().getWeather());
                     break;
                 case 4:
-                    controller.updateView1(setCityForSearchWeather());
+                    controller.updateView1(new SetCityForSearchWeather().setSomeScannerTask1Task5());
                     break;
                 case 5:
-                    controller.updateView1(sortingByTempAndHumidity());
+                    controller.updateView1(new SortingByTempAndHumidity().setSomeScannerTask1Task5());
                     break;
                 case 6:
                     controller.updateView2(searchCityByRangeOfTemp());

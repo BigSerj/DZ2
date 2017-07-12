@@ -2,7 +2,7 @@ package weatherAPI.presentation.menu;
 
 
 import weatherAPI.data.parse.parsed.Weather;
-import weatherAPI.domain.tasks.common.MenuTask;
+import weatherAPI.domain.manager.MenuTask;
 import weatherAPI.presentation.constants.MessagesConst;
 
 import java.util.ArrayList;

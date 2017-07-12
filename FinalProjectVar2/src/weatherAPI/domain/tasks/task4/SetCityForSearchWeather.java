@@ -3,19 +3,20 @@ package weatherAPI.domain.tasks.task4;
 
 import weatherAPI.data.controlData.DataManager;
 import weatherAPI.data.parse.parsed.Weather;
-import weatherAPI.presentation.constants.MessagesConst;
+import weatherAPI.domain.tasks.superTask.SuperTask;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static weatherAPI.presentation.constants.MessagesConst.*;
 import static weatherAPI.presentation.menu.ControlCentreMenu.showCurrentMenu;
 
 
-public class SetCityForSearchWeather {
+public class SetCityForSearchWeather extends SuperTask{
 
     // метод для поиска погоды по городу
-    public static ArrayList<Weather> setCityForSearchWeather() {
-        System.out.println(showCurrentMenu(MessagesConst.MENU_FIND_BY_CITY));
+    public ArrayList<Weather> setSomeScannerTask1Task5() {
+        System.out.println(showCurrentMenu(MENU_FIND_BY_CITY));
 
         ArrayList<Weather> weathers2 = new ArrayList<>();
         ArrayList<Weather> weathers = DataManager.getInstance().getRoot().getWeather();

@@ -1,21 +1,11 @@
-package weatherAPI.domain.tasks.common;
+package weatherAPI.domain.manager;
 
 
 import weatherAPI.data.controlData.DataManager;
 import weatherAPI.data.parse.parsed.Weather;
 import weatherAPI.presentation.constants.MessagesConst;
 
-import java.util.ArrayList;
-
 import static weatherAPI.domain.checks.ScannerIn.scannerToString;
-import static weatherAPI.domain.tasks.task1.SetDateForSearch.setDateForSearch;
-import static weatherAPI.domain.tasks.task2.SetDatePeriodForSearch.setDatePeriodForSearch;
-import static weatherAPI.domain.tasks.task4.SetCityForSearchWeather.setCityForSearchWeather;
-import static weatherAPI.domain.tasks.task5.SortingByTempAndHumidity.sortingByTempAndHumidity;
-import static weatherAPI.domain.tasks.task6.SearchCityByRangeOfTemp.searchCityByRangeOfTemp;
-import static weatherAPI.domain.tasks.task7.SearchMiddleMaxTempInRegion.searchMiddleMaxTempInRegion;
-import static weatherAPI.presentation.constants.MessagesConst.*;
-import static weatherAPI.presentation.menu.ControlCentreMenu.showCurrentMenu;
 
 
 // класс-хранилка меню

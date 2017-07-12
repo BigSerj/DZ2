@@ -3,18 +3,18 @@ package weatherAPI.domain.tasks.task6;
 
 import weatherAPI.data.controlData.DataManager;
 import weatherAPI.data.parse.parsed.Weather;
-import weatherAPI.presentation.constants.MessagesConst;
 
 import java.util.ArrayList;
 
 import static weatherAPI.domain.checks.ScannerIn.scannerToString;
+import static weatherAPI.presentation.constants.MessagesConst.*;
 import static weatherAPI.presentation.menu.ControlCentreMenu.showCurrentMenu;
 
 
 public class SearchCityByRangeOfTemp {
 
     public static ArrayList<String> searchCityByRangeOfTemp() {
-        System.out.println(showCurrentMenu(MessagesConst.MENU_FIND_CITY_BY_RANGE_OF_TEMP));
+        System.out.println(showCurrentMenu(MENU_FIND_CITY_BY_RANGE_OF_TEMP));
 
         // вводим искомую температуру
         int searchTemp = scannerToString();

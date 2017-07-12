@@ -1,11 +1,12 @@
-package weatherAPI.domain.tasks.common;
+package weatherAPI.domain.tasks.sorting;
 
 
-import weatherAPI.data.constants.TagsConst;
 import weatherAPI.data.controlData.DataManager;
 import weatherAPI.data.parse.parsed.Weather;
 
 import java.util.ArrayList;
+
+import static weatherAPI.data.constants.TagsConst.*;
 
 
 public class SortingCore {
@@ -72,9 +73,9 @@ public class SortingCore {
     // метода для выбора и возврата того тэга,который необходим прямо сейчас.
     private static Integer caseTag(ArrayList<Weather> weatherThis, int i){
         switch (constTagThis){
-            case TagsConst.TEMP_MAX_TAG:return weatherThis.get(i).getTempMax();
-            case TagsConst.TEMP_MIN_TAG:return weatherThis.get(i).getTempMin();
-            case TagsConst.HUMIDITY_TAG:return weatherThis.get(i).getHumidity();
+            case TEMP_MAX_TAG:return weatherThis.get(i).getTempMax();
+            case TEMP_MIN_TAG:return weatherThis.get(i).getTempMin();
+            case HUMIDITY_TAG:return weatherThis.get(i).getHumidity();
         }
         return -1;
     }

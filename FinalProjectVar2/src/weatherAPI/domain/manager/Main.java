@@ -104,7 +104,9 @@ public class Main {
 
             // выводим на экран сообщение о выборе меню
             controller.updateViewMain();
+            // вводим с клавиатуры нужный пункт меню
             controller.setModelMenuInputNumber();
+            // в соответствии с введенным пунктом меню переходим в соотв. выполнение кода по заданию
             switch (controller.getModelMenuInputNumber()) {
                 case 1:
                     controller.updateView1(new SetDateForSearch().setSomeScannerTask1Task5());

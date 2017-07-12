@@ -4,21 +4,21 @@ package weatherAPI.presentation.menu;
 import weatherAPI.data.parse.parsed.Weather;
 import weatherAPI.domain.manager.MenuTask;
 import weatherAPI.presentation.constants.MessagesConst;
-
 import java.util.ArrayList;
 
-
+// контроллер вывода на экран
 public class ShowResultController {
 
     private ShowResult view;
     private MenuTask modelMenu;
+
 
     public ShowResultController(ShowResult view, MenuTask modelMenu){
         this.view = view;
         this.modelMenu = modelMenu;
     }
 
-
+    // геттеры сеттеры для контроллера
     public void setModelMenuInputNumber(){
         modelMenu.setInputNumber();
     }
@@ -32,7 +32,7 @@ public class ShowResultController {
         return modelMenu.getMenuTask();
     }
 
-
+    // определяем методы
     public void updateViewMain(){
         view.toScreenMain();
     }

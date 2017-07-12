@@ -13,20 +13,20 @@ public class MenuTask {
     // переменная-хранитель вводной информации о том, какой номер меню выбрали
     private Integer inputNumber;
 
-
+    // геттеры
     public Integer getInputNumber() {
         return inputNumber;
     }
-    public void setInputNumber() {
-        this.inputNumber = scannerToString();
-    }
-
-
     public MessagesConst getMenuTask() {
         return menuTasks;
     }
+
+    // сеттеры
     public void setMenuTask(MessagesConst menuTasks) {
         this.menuTasks = menuTasks;
+    }
+    public void setInputNumber() {
+        this.inputNumber = scannerToString();
     }
 
 }

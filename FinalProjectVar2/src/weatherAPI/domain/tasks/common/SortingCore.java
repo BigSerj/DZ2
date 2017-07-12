@@ -1,8 +1,8 @@
-package weatherAPI.domain.tasks.task7;
+package weatherAPI.domain.tasks.common;
 
 
 import weatherAPI.data.constants.TagsConst;
-import weatherAPI.data.manager.DataManager;
+import weatherAPI.data.controlData.DataManager;
 import weatherAPI.data.parse.parsed.Weather;
 
 import java.util.ArrayList;

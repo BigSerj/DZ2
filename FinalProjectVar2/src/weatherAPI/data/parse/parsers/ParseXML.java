@@ -7,7 +7,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import weatherAPI.data.constants.LinksConst;
 import weatherAPI.data.constants.TagsConst;
-import weatherAPI.data.manager.DataManager;
+import weatherAPI.data.controlData.DataManager;
 import weatherAPI.data.parse.parsed.Root;
 import weatherAPI.data.parse.parsed.Weather;
 

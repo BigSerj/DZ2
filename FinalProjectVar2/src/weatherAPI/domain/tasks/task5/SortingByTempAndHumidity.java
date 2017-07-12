@@ -3,7 +3,7 @@ package weatherAPI.domain.tasks.task5;
 
 import weatherAPI.data.constants.TagsConst;
 import weatherAPI.data.parse.parsed.Weather;
-import weatherAPI.domain.tasks.task7.SortingCore;
+import weatherAPI.domain.tasks.common.SortingCore;
 import weatherAPI.presentation.constants.MessagesConst;
 
 import java.util.ArrayList;

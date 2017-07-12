@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.regex.Pattern;
 
 
-public class DatesFormat {
+public class Dates {
 
     // метод перевода из Date в нужный вид String
     public static String convertDate(String dateOld) {

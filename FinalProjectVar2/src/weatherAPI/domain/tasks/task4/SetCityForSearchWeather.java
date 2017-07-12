@@ -1,7 +1,7 @@
 package weatherAPI.domain.tasks.task4;
 
 
-import weatherAPI.data.manager.DataManager;
+import weatherAPI.data.controlData.DataManager;
 import weatherAPI.data.parse.parsed.Weather;
 import weatherAPI.presentation.constants.MessagesConst;
 
@@ -40,6 +40,4 @@ public class SetCityForSearchWeather {
         return weathers2;
 
     }
-
-
 }

@@ -1,13 +1,13 @@
 package weatherAPI.domain.tasks.task1;
 
 
-import weatherAPI.data.manager.DataManager;
+import weatherAPI.data.controlData.DataManager;
 import weatherAPI.data.parse.parsed.Weather;
 import weatherAPI.presentation.constants.MessagesConst;
 
 import java.util.ArrayList;
 
-import static weatherAPI.domain.checks.DatesFormat.getSearchDateMethod;
+import static weatherAPI.domain.checks.Dates.getSearchDateMethod;
 import static weatherAPI.domain.checks.ScannerIn.scannerStringToDate;
 import static weatherAPI.presentation.menu.ControlCentreMenu.showCurrentMenu;
 

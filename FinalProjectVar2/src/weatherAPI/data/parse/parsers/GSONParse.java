@@ -3,7 +3,7 @@ package weatherAPI.data.parse.parsers;
 
 import com.google.gson.Gson;
 import weatherAPI.data.constants.LinksConst;
-import weatherAPI.data.manager.DataManager;
+import weatherAPI.data.controlData.DataManager;
 import weatherAPI.data.parse.parsed.Root;
 import weatherAPI.data.parse.parsed.Weather;
 

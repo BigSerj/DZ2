@@ -1,15 +1,15 @@
 package weatherAPI.domain.tasks.task2;
 
 
-import weatherAPI.data.manager.DataManager;
+import weatherAPI.data.controlData.DataManager;
 import weatherAPI.data.parse.parsed.Weather;
 import weatherAPI.presentation.constants.MessagesConst;
 import weatherAPI.presentation.menu.Constants;
 
 import java.util.ArrayList;
 
-import static weatherAPI.domain.checks.DatesFormat.convertStringToDate;
-import static weatherAPI.domain.checks.DatesFormat.convertStringToDate2;
+import static weatherAPI.domain.checks.Dates.convertStringToDate;
+import static weatherAPI.domain.checks.Dates.convertStringToDate2;
 import static weatherAPI.domain.checks.ScannerIn.scannerStringToDate;
 import static weatherAPI.presentation.menu.ControlCentreMenu.showCurrentMenu;
 

@@ -1,7 +1,7 @@
 package weatherAPI.domain.tasks.task6;
 
 
-import weatherAPI.data.manager.DataManager;
+import weatherAPI.data.controlData.DataManager;
 import weatherAPI.data.parse.parsed.Weather;
 import weatherAPI.presentation.constants.MessagesConst;
 

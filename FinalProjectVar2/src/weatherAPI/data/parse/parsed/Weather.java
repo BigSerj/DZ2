@@ -5,8 +5,8 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
-import static weatherAPI.domain.checks.DatesFormat.checkDate;
-import static weatherAPI.domain.checks.DatesFormat.convertDate;
+import static weatherAPI.domain.checks.Dates.checkDate;
+import static weatherAPI.domain.checks.Dates.convertDate;
 
 
 public class Weather {

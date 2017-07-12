@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FinalProjectVar2:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FinalProjectVar2_jar</output-path>
+    <root id="archive" name="FinalProjectVar2.jar">
+      <element id="module-output" name="FinalProjectVar2" />
+      <element id="extracted-dir" path="/Flash/JAVA for ANDROID/JSON/libs/gson-2.2.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Flash/JAVA for ANDROID/JSON/libs/json-simple-1.1.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

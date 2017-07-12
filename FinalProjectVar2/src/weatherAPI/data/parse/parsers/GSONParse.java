@@ -2,7 +2,6 @@ package weatherAPI.data.parse.parsers;
 
 
 import com.google.gson.Gson;
-import weatherAPI.data.constants.LinksConst;
 import weatherAPI.data.controlData.DataManager;
 import weatherAPI.data.parse.parsed.Root;
 import weatherAPI.data.parse.parsed.Weather;
@@ -11,13 +10,15 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 
+import static weatherAPI.data.constants.LinksConst.*;
+
 
 public class GSONParse implements Parse {
 
     // переопределяем метод getPath() для GSONParse
     @Override
     public String getPath() {
-        return LinksConst.LINK_JSON;
+        return LINK_JSON;
     }
 
     // переопределяем метод parsing() для GSONParse
@@ -27,7 +28,7 @@ public class GSONParse implements Parse {
         // пробуем открыть файл и распарсить
         try{
             // создаем объект reader и сразу указываем объект нашего файла
-            BufferedReader reader = new BufferedReader(new FileReader(LinksConst.LINK_ON_THIS_SYSTEM));
+            BufferedReader reader = new BufferedReader(new FileReader(LINK_ON_THIS_SYSTEM));
             // создаем объект GSON
             Gson gson = new Gson();
             // парсим и записываем результат в объект parsed

@@ -3,8 +3,6 @@ package weatherAPI.data.parse.parsers;
 
 import org.json.simple.*;
 import org.json.simple.parser.JSONParser;
-import weatherAPI.data.constants.LinksConst;
-import weatherAPI.data.constants.TagsConst;
 import weatherAPI.data.controlData.DataManager;
 import weatherAPI.data.parse.parsed.Root;
 import weatherAPI.data.parse.parsed.Weather;
@@ -13,6 +11,9 @@ import weatherAPI.presentation.exceptions.MyExceptions;
 import java.io.FileReader;
 import java.util.ArrayList;
 
+import static weatherAPI.data.constants.LinksConst.*;
+import static weatherAPI.data.constants.TagsConst.*;
+
 
 public class JSONParse implements Parse {
 
@@ -20,7 +21,7 @@ public class JSONParse implements Parse {
     // переопределяем метод getPath() для JSONParse
     @Override
     public String getPath() {
-        return LinksConst.LINK_JSON;
+        return LINK_JSON;
     }
 
     // переопределяем метод parsing() для JSONParse
@@ -34,113 +35,74 @@ public class JSONParse implements Parse {
 
         try {
             // создаем объект распарсенного файла для его последующего разбора
-            JSONObject rootObj = (JSONObject)parser.parse(new FileReader(LinksConst.LINK_ON_THIS_SYSTEM));
-//            JSONObject rootObj = (JSONObject)parser.parse(new FileReader("weather.json"));
+            JSONObject rootObj = (JSONObject)parser.parse(new FileReader(LINK_ON_THIS_SYSTEM));
 
             // считываем name в parsed
-            String name = (String)rootObj.get(TagsConst.NAME_TAG);
+            String name = (String)rootObj.get(NAME_TAG);
             root.setName(name);
             // считываем date в parsed
-            String dateRoot = (String)rootObj.get(TagsConst.DATE_TAG);
+            String dateRoot = (String)rootObj.get(DATE_TAG);
             root.setDate(dateRoot);
 
             // создаем лист для элементов массива weather
             ArrayList<Weather> weatherList = new ArrayList<>();
             // считываем массив weather в новую переменную для последующего разбора
-            JSONArray weatherArray = (JSONArray)rootObj.get(TagsConst.WEATHER_TAG);
+            JSONArray weatherArray = (JSONArray)rootObj.get(WEATHER_TAG);
 
             // пока массив не окончен
             for (int j=0;j<weatherArray.size();j++){
                 // берем один элемент
-                JSONObject itemObj = (JSONObject)weatherArray.get(j);
+                final JSONObject itemObj = (JSONObject)weatherArray.get(j);
                 // создаем наш элемент weather
                 Weather weather = new Weather();
 
 
+
+                // Создаем вложенный класс для проверки водимых значений
+                class Check{
+                    private long parseLong(int j, String tag){
+                        try {
+                            try {
+                                return (long) itemObj.get(tag);
+                            } catch (Exception e) {
+                                throw new MyExceptions(tag, e);
+                            }
+                        }catch (MyExceptions e){
+                            e.getRussianMessage(j);
+                        }
+                        return -999;
+                    }
+                    private String parseString(int j, String tag){
+                        try {
+                            try {
+                                return (String) itemObj.get(tag);
+                            } catch (Exception e) {
+                                throw new MyExceptions(tag, e);
+                            }
+                        }catch (MyExceptions e){
+                            e.getRussianMessage(j);
+                        }
+                        return "";
+                    }
+                }
+
                 // считываем все поля очередного элемента массива weather
-                long id = -999;
-                try {
-                    try {
-                        id = (long) itemObj.get(TagsConst.ID_TAG);
-                    } catch (Exception e) {
-                        throw new MyExceptions(TagsConst.ID_TAG,e);
-                    }
-                }catch (MyExceptions e){
-                    e.getRussianMessage(j);
-                }
+                Check check = new Check();
+                long id = check.parseLong(j,ID_TAG);
+                String title = check.parseString(j,TITLE_TAG);
+                String description = check.parseString(j,DESCRIPTION_TAG);
+                long tempMin = check.parseLong(j,TEMP_MIN_TAG);
+                long tempMax = check.parseLong(j,TEMP_MAX_TAG);
+                long humidity = check.parseLong(j,HUMIDITY_TAG);
+                String date = check.parseString(j,DATE_TAG);
 
-                String title = "";
-                try {
-                    try {
-                        title = (String) itemObj.get(TagsConst.TITLE_TAG);
-                    } catch (Exception e) {
-                        throw new MyExceptions(TagsConst.TITLE_TAG,e);
-                    }
-                }catch (MyExceptions e){
-                    e.getRussianMessage(j);
-                }
-
-                String description = "";
-                try {
-                    try {
-                        description = (String) itemObj.get(TagsConst.DESCRIPTION_TAG);
-                    } catch (Exception e) {
-                        throw new MyExceptions(TagsConst.DESCRIPTION_TAG,e);
-                    }
-                }catch (MyExceptions e){
-                    e.getRussianMessage(j);
-                }
-
-                long tempMin = -999;
-                try {
-                    try {
-                        tempMin = (long) itemObj.get(TagsConst.TEMP_MIN_TAG);
-                    } catch (Exception e) {
-                        throw new MyExceptions(TagsConst.TEMP_MIN_TAG,e);
-                    }
-                }catch (MyExceptions e){
-                    e.getRussianMessage(j);
-                }
-
-                long tempMax = -999;
-                try {
-                    try {
-                        tempMax = (long) itemObj.get(TagsConst.TEMP_MAX_TAG);
-                    } catch (Exception e) {
-                        throw new MyExceptions(TagsConst.TEMP_MAX_TAG,e);
-                    }
-                }catch (MyExceptions e){
-                    e.getRussianMessage(j);
-                }
-
-                long humidity = -999;
-                try {
-                    try {
-                        humidity = (long) itemObj.get(TagsConst.HUMIDITY_TAG);
-                    } catch (Exception e) {
-                        throw new MyExceptions(TagsConst.HUMIDITY_TAG,e);
-                    }
-                }catch (MyExceptions e){
-                    e.getRussianMessage(j);
-                }
-
-                String date = "";
-                try {
-                    try {
-                        date = (String) itemObj.get(TagsConst.DATE_TAG);
-                    } catch (Exception e) {
-                        throw new MyExceptions(TagsConst.DATE_TAG,e);
-                    }
-                }catch (MyExceptions e){
-                    e.getRussianMessage(j);
-                }
-
+                // для одного location не имеет смысла создавать метод, поэтому, делаем на месте
                 ArrayList<String> location = new ArrayList<>();
                 try {
                     try {
-                        location = (ArrayList<String>) itemObj.get(TagsConst.LOCATION_TAG);
+                        location = (ArrayList<String>) itemObj.get(LOCATION_TAG);
                     } catch (Exception e) {
-                        throw new MyExceptions(TagsConst.LOCATION_TAG,e);
+                        throw new MyExceptions(LOCATION_TAG,e);
                     }
                 }catch (MyExceptions e){
                     e.getRussianMessage(j);
